@@ -171,6 +171,20 @@
       }
     }
 
+  
+    /* ===== FINAL MOBILE FIXES ===== */
+    @media(max-width:767px){
+      #example .grid.grid-cols-3 > div{
+        min-width:0;
+        overflow:hidden;
+      }
+      #example .grid.grid-cols-3 .text-green{
+        font-size:14px !important;
+        line-height:1.25 !important;
+        letter-spacing:-0.03em;
+      }
+    }
+
   </style>
 </head>
 <body class="antialiased">
@@ -807,10 +821,10 @@
         <div class="text-[48px] leading-tight font-black text-amber-700 mt-2">약 398만원 차이</div>
       </div>
 
-      <div class="grid grid-cols-3 gap-3 mt-8 text-center">
-        <div class="rounded-2xl bg-[#FBF8F0] p-5"><div class="text-xs text-gray-500 font-bold">5번 이용</div><div class="text-xl font-black text-green mt-2">약 1,990만원</div></div>
-        <div class="rounded-2xl bg-[#FBF8F0] p-5"><div class="text-xs text-gray-500 font-bold">7번 이용</div><div class="text-xl font-black text-green mt-2">약 2,786만원</div></div>
-        <div class="rounded-2xl bg-[#FBF8F0] p-5"><div class="text-xs text-gray-500 font-bold">10번 이용</div><div class="text-xl font-black text-green mt-2">약 3,980만원</div></div>
+      <div class="grid grid-cols-3 gap-2 sm:gap-3 mt-8 text-center">
+        <div class="rounded-2xl bg-[#FBF8F0] p-3 sm:p-5 min-w-0"><div class="text-[11px] sm:text-xs text-gray-500 font-bold">5번 이용</div><div class="text-[14px] sm:text-xl leading-tight font-black text-green mt-2 whitespace-normal break-keep">약 1,990만원</div></div>
+        <div class="rounded-2xl bg-[#FBF8F0] p-3 sm:p-5 min-w-0"><div class="text-[11px] sm:text-xs text-gray-500 font-bold">7번 이용</div><div class="text-[14px] sm:text-xl leading-tight font-black text-green mt-2 whitespace-normal break-keep">약 2,786만원</div></div>
+        <div class="rounded-2xl bg-[#FBF8F0] p-3 sm:p-5 min-w-0"><div class="text-[11px] sm:text-xs text-gray-500 font-bold">10번 이용</div><div class="text-[14px] sm:text-xl leading-tight font-black text-green mt-2 whitespace-normal break-keep">약 3,980만원</div></div>
       </div>
 
       <div class="mt-7 text-center font-black text-green">
@@ -836,9 +850,9 @@
       
         <div class="media-gallery gallery" data-index="0">
           <div class="media-track">
-            <div class="media-slide"><img src="./images/greenvally1.jpg" alt="그린밸리CC 사진 1" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/greenvally2.jpg" alt="그린밸리CC 사진 2" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/greenvally3.jpg" alt="그린밸리CC 사진 3" loading="lazy" /></div>
+            <div class="media-slide"><img src="./images/greenvally1.jpeg" alt="그린밸리CC 사진 1" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/greenvally2.jpeg" alt="그린밸리CC 사진 2" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/greenvally3.jpeg" alt="그린밸리CC 사진 3" loading="lazy" /></div>
           </div>
           <div class="media-label">그린밸리CC</div>
           <button type="button" class="media-nav media-prev" aria-label="이전 사진">‹</button>
@@ -854,9 +868,9 @@
       
         <div class="media-gallery gallery" data-index="0">
           <div class="media-track">
-            <div class="media-slide"><img src="./images/lakewood1.jpg" alt="레이크우드CC 사진 1" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/lakewood2.jpg" alt="레이크우드CC 사진 2" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/lakewood3.jpg" alt="레이크우드CC 사진 3" loading="lazy" /></div>
+            <div class="media-slide"><img src="./images/lakewood.jpg" alt="레이크우드CC 사진 1" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/lakewood2.jpeg" alt="레이크우드CC 사진 2" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/lakewood3.jpeg" alt="레이크우드CC 사진 3" loading="lazy" /></div>
           </div>
           <div class="media-label">레이크우드CC</div>
           <button type="button" class="media-nav media-prev" aria-label="이전 사진">‹</button>
@@ -872,9 +886,9 @@
       
         <div class="media-gallery gallery" data-index="0">
           <div class="media-track">
-            <div class="media-slide"><img src="./images/silverlake1.jpg" alt="실버레이크 사진 1" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/silverlake2.jpg" alt="실버레이크 사진 2" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/silverlake3.jpg" alt="실버레이크 사진 3" loading="lazy" /></div>
+            <div class="media-slide"><img src="./images/silverlake1.jpeg" alt="실버레이크 사진 1" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/silverlake2.jpeg" alt="실버레이크 사진 2" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/silverlake3.jpeg" alt="실버레이크 사진 3" loading="lazy" /></div>
           </div>
           <div class="media-label">실버레이크</div>
           <button type="button" class="media-nav media-prev" aria-label="이전 사진">‹</button>
@@ -890,9 +904,9 @@
       
         <div class="media-gallery gallery" data-index="0">
           <div class="media-track">
-            <div class="media-slide"><img src="./images/supaphruek1.jpg" alt="수파프룩CC 사진 1" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/supaphruek2.jpg" alt="수파프룩CC 사진 2" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/supaphruek3.jpg" alt="수파프룩CC 사진 3" loading="lazy" /></div>
+            <div class="media-slide"><img src="./images/Subhapruek1.jpeg" alt="수파프룩CC 사진 1" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/Subhapruek2.jpeg" alt="수파프룩CC 사진 2" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/Subhapruek3.jpeg" alt="수파프룩CC 사진 3" loading="lazy" /></div>
           </div>
           <div class="media-label">수파프룩CC</div>
           <button type="button" class="media-nav media-prev" aria-label="이전 사진">‹</button>
@@ -908,9 +922,9 @@
       
         <div class="media-gallery gallery" data-index="0">
           <div class="media-track">
-            <div class="media-slide"><img src="./images/Khao Cha-Ngok1.jpg" alt="카오차녹 사진 1" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/Khao Cha-Ngok2.jpg" alt="카오차녹 사진 2" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/Khao Cha-Ngok3.jpg" alt="카오차녹 사진 3" loading="lazy" /></div>
+            <div class="media-slide"><img src="./images/Khao Cha-Ngok1.jpeg" alt="카오차녹 사진 1" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/Khao Cha-Ngok2.jpeg" alt="카오차녹 사진 2" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/Khao Cha-Ngok3.jpeg" alt="카오차녹 사진 3" loading="lazy" /></div>
           </div>
           <div class="media-label">카오차녹</div>
           <button type="button" class="media-nav media-prev" aria-label="이전 사진">‹</button>
@@ -1019,8 +1033,8 @@
       
         <div class="media-gallery gallery" data-index="0">
           <div class="media-track">
-            <div class="media-slide"><img src="./images/Tisha Hotel1.jpg" alt="Tisha Hotel 사진 1" loading="lazy" /></div>
-<div class="media-slide"><img src="./images/Tisha Hotel2.jpg" alt="Tisha Hotel 사진 2" loading="lazy" /></div>
+            <div class="media-slide"><img src="./images/Tisha Hotel1.jpeg" alt="Tisha Hotel 사진 1" loading="lazy" /></div>
+<div class="media-slide"><img src="./images/Tisha Hotel2.jpeg" alt="Tisha Hotel 사진 2" loading="lazy" /></div>
           </div>
           <div class="media-label">Tisha Hotel</div>
           <button type="button" class="media-nav media-prev" aria-label="이전 사진">‹</button>
@@ -1147,7 +1161,7 @@
         <div class="mt-6 card p-6">
           <div class="font-black text-lg">🏌️ 골퍼따요 김대우 팀장</div>
           <a href="tel:01025991095" class="block text-3xl font-black text-green mt-2">010-2599-1095</a>
-          <a href="#inquiry" class="block mt-4 bg-green text-white text-center py-4 rounded-xl font-black">
+          <a href="tel:01025991095" class="block mt-4 bg-green text-white text-center py-4 rounded-xl font-black">
             김대우 팀장에게 바로 상담
           </a>
         </div>
@@ -1289,7 +1303,7 @@
 
     <div class="hero-actions mt-8 flex flex-col sm:flex-row justify-center gap-3">
       <a href="#calculator" class="pulse-cta bg-[#F2D795] text-[#193428] px-8 py-4 rounded-2xl font-black">몇 번 가면 본전인지 지금 계산하기</a>
-      <a href="#inquiry" class="border border-white/20 bg-white/10 px-8 py-4 rounded-2xl font-black">김대우 팀장에게 바로 문의</a>
+      <a href="tel:01025991095" class="border border-white/20 bg-white/10 px-8 py-4 rounded-2xl font-black">김대우 팀장에게 바로 문의</a>
     </div>
 
     <div class="mt-8 text-white/75 font-black">
@@ -1311,7 +1325,7 @@
 <!-- MOBILE STICKY -->
 <div class="fixed bottom-0 inset-x-0 z-50 md:hidden sticky border-t border-gray-100 p-3 grid grid-cols-[.9fr_1.1fr] gap-2">
   <a href="#calculator" class="bg-white border border-gray-200 text-green p-4 rounded-xl text-center font-black text-sm">본전 계산</a>
-  <a href="#inquiry" class="bg-green text-white p-4 rounded-xl text-center font-black text-sm shadow-lg">김대우 팀장 상담</a>
+  <a href="tel:01025991095" class="bg-green text-white p-4 rounded-xl text-center font-black text-sm shadow-lg">김대우 팀장 상담</a>
 </div>
 
 <script>
