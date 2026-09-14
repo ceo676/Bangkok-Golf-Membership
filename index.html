@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="비싸지는 태국 겨울골프, 다시 8만원대로. 그린밸리 Five-Star 회원권 · 5개 구장 99홀 · 장박·부부·법인 무기명 상담." />
+  <meta name="description" content="비싸지는 태국 겨울골프, 다시 8만원대로. 그린밸리 Five-Star 회원권 · 5개 구장 99홀 · 장박·부부·법인 무기명 상담. 비싸지는 태국 겨울골프를 회원가로 다시." />
   <title>Bangkok Golf Membership | Green Valley Five-Star</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -79,7 +79,7 @@
       <div class="text-[10px] font-black tracking-[.18em] text-emerald-700">BANGKOK GOLF MEMBERSHIP</div>
       <div class="text-sm md:text-base font-black text-green">GREEN VALLEY FIVE-STAR</div>
     </div>
-    <a href="#inquiry" class="bg-green text-white px-5 py-2.5 rounded-xl text-sm font-black">김팀장 카톡 상담</a>
+    <a href="#inquiry" class="bg-green text-white px-5 py-2.5 rounded-xl text-sm font-black">내 이득 계산하기</a>
   </div>
 </nav>
 
@@ -105,9 +105,9 @@
       </div>
 
       <p class="mt-6 max-w-xl text-white/72 leading-8 font-semibold">
-        매년 더 비싸지는 태국 성수기 골프비용.
-        그린밸리 Five-Star 회원권은 그린밸리 정회원권을 기반으로
-        방콕 5개 구장을 회원가로 이용하는 방식으로 부담을 낮춥니다.
+        태국 골프가 예전만큼 저렴하지 않다는 말, 많이 들으셨을 겁니다.
+        Five-Star는 매년 오르는 성수기 비용을 그대로 따라가는 대신
+        회원가로 5개 구장을 반복 이용할 수 있게 만든 회원권입니다.
       </p>
 
       <div class="mt-7 flex flex-wrap gap-2">
@@ -122,8 +122,8 @@
       </div>
 
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#inquiry" class="bg-[#F2D38E] text-[#193428] px-7 py-4 rounded-2xl font-black text-center cta-glow">
-          내가 사면 이득인지 계산하기
+        <a href="#calculator" class="bg-[#F2D38E] text-[#193428] px-7 py-4 rounded-2xl font-black text-center cta-glow hover:-translate-y-0.5 transition">
+          몇 번 가면 본전인지 바로 보기
         </a>
         <a href="tel:01025991095" class="border border-white/25 bg-white/10 px-7 py-4 rounded-2xl font-black text-center">
           010-2599-1095
@@ -195,8 +195,9 @@
         <div class="eyebrow text-emerald-700">THE SOLUTION</div>
         <h2 class="title mt-3">Five-Star 회원가는<br>이렇게 다릅니다</h2>
         <p class="desc mt-4">
-          한 골프장만 이용하는 단일회원권이 아니라,
-          그린밸리 정회원권을 기반으로 5개 파트너 구장을 회원가로 활용하는 구조입니다.
+          그린밸리 한 곳만 쓰는 회원권이 아닙니다.
+          그린밸리 정회원 자격을 기반으로 5개 파트너 구장을 회원가로 이용하면서
+          장박·시내골프·부부·법인 이용까지 폭넓게 활용할 수 있습니다.
         </p>
       </div>
       <div class="grid sm:grid-cols-2 gap-4">
@@ -214,8 +215,8 @@
   <div class="container">
     <div class="text-center max-w-3xl mx-auto">
       <div class="eyebrow text-amber-700">LOCAL VS FIVE-STAR</div>
-      <h2 class="title mt-3">그린밸리 하나만 이용해도<br>현지 회원권은 연 약 340만원</h2>
-      <p class="desc mt-4">10년을 단순 계산하면 약 3,400만원. Five-Star는 단일 구장이 아니라 5개 구장을 회원가로 활용합니다.</p>
+      <h2 class="title mt-3">그린밸리 하나만 이용하는 현지 회원권도<br>연 약 340만원 수준</h2>
+      <p class="desc mt-4">10년 단순 계산 약 3,400만원. 반복해서 태국 골프를 가는 분이라면 단일 구장보다 5개 구장을 함께 활용하는 구조가 훨씬 중요합니다.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-5 mt-10">
@@ -249,205 +250,201 @@
 
 
 <!-- COST CALCULATOR -->
-<section class="section bg-[#071E17] text-white" id="calculator">
-  <div class="container max-w-6xl">
-    <div class="text-center max-w-3xl mx-auto">
-      <div class="eyebrow text-[#F2D795]">REAL COST CALCULATOR</div>
-      <h2 class="title mt-3">회원권을 사면<br>실제로 얼마나 달라질까요?</h2>
+<section class="section bg-[#071E17] text-white relative overflow-hidden" id="calculator">
+  <div class="absolute -top-24 -right-16 w-[420px] h-[420px] rounded-full bg-[#D8B56A]/10 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-24 -left-20 w-[420px] h-[420px] rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"></div>
+
+  <div class="container max-w-6xl relative z-10">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="eyebrow text-[#F2D795]">HOW MANY TRIPS TO BREAK EVEN?</div>
+      <h2 class="title mt-3">몇 번 가면 회원권 값이 빠질까요?</h2>
       <p class="text-sm text-white/65 mt-4 leading-7 font-semibold">
-        3박5일 · 54홀 기준으로 여행사 공개 판매가와 회원 이용비를 직접 비교해보세요.
-        회원권 구입비까지 포함한 손익분기 이용횟수와 장기 누적비용도 자동 계산됩니다.
+        복잡하게 계산하지 마세요. 일정과 회원권만 선택하면
+        <b class="text-white">4인 1팀 기준 1회 절감액 · 5회 · 10회 누적 절감액 · 손익분기 횟수</b>를 바로 보여드립니다.
       </p>
     </div>
 
-    <!-- PUBLIC MARKET EXAMPLES -->
-    <div class="mt-10 grid md:grid-cols-3 gap-4">
-      <div class="rounded-3xl bg-white/8 border border-white/10 p-6">
-        <div class="text-[11px] text-[#F2D795] font-black">2026년 11월 공개가</div>
-        <div class="text-lg font-black mt-2">방콕 시내 다색 3박5일</div>
-        <div class="text-3xl font-black mt-3">138만원~</div>
-        <div class="text-xs text-white/50 mt-2">항공편 포함 상품 · 날짜별 변동</div>
-        <div class="text-[11px] text-white/40 mt-3">출처: 골프투어로 공개 판매가</div>
-      </div>
+    <div class="mt-10 grid lg:grid-cols-[.9fr_1.1fr] gap-6 items-start">
+      <!-- SIMPLE INPUT -->
+      <div class="rounded-3xl bg-white text-gray-900 p-6 md:p-8 shadow-2xl reveal">
+        <div class="text-xs font-black text-emerald-700">STEP 1</div>
+        <h3 class="text-xl font-black mt-1">여행 일정 선택</h3>
 
-      <div class="rounded-3xl bg-white/8 border border-white/10 p-6">
-        <div class="text-[11px] text-[#F2D795] font-black">2026년 11월 공개가</div>
-        <div class="text-lg font-black mt-2">방콕 시내 프리미엄 3박5일</div>
-        <div class="text-3xl font-black mt-3">156만원~</div>
-        <div class="text-xs text-white/50 mt-2">항공편 포함 상품 · 날짜별 변동</div>
-        <div class="text-[11px] text-white/40 mt-3">출처: 골프투어로 공개 판매가</div>
-      </div>
+        <div class="grid grid-cols-3 gap-2 mt-5">
+          <button type="button"
+            class="duration-btn border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black transition hover:border-emerald-300"
+            data-nights="3" data-days="5" data-rounds="3" data-package="1580000">
+            <span class="block text-lg">3박5일</span>
+            <span class="block text-[10px] text-gray-400 mt-1">54홀</span>
+          </button>
 
-      <div class="rounded-3xl bg-white/8 border border-white/10 p-6">
-        <div class="text-[11px] text-[#F2D795] font-black">현재 공개가</div>
-        <div class="text-lg font-black mt-2">그린밸리·타나시티 3박5일</div>
-        <div class="text-3xl font-black mt-3">61.7만원~</div>
-        <div class="text-xs text-white/50 mt-2">호텔+골프+차량+조식 현지팩 · 항공 별도</div>
-        <div class="text-[11px] text-white/40 mt-3">출처: 핀핀골프 공개 판매가</div>
-      </div>
-    </div>
+          <button type="button"
+            class="duration-btn border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-2xl py-4 font-black transition"
+            data-nights="4" data-days="6" data-rounds="4" data-package="1750000">
+            <span class="block text-lg">4박6일</span>
+            <span class="block text-[10px] opacity-60 mt-1">72홀 · 추천</span>
+          </button>
 
-    <p class="text-[11px] text-white/35 mt-4 text-center leading-5">
-      ※ 공개 상품은 골프장, 항공, 호텔, 포함사항이 서로 다릅니다. 위 금액은 시장 가격대 참고용이며
-      아래 계산기에서 비교 기준을 직접 변경할 수 있습니다.
-    </p>
-
-    <!-- CALCULATOR BODY -->
-    <div class="mt-9 grid lg:grid-cols-[1.02fr_.98fr] gap-6 items-start">
-      <div class="rounded-3xl bg-white text-gray-900 p-6 md:p-8">
-        <h3 class="text-xl font-black">내 이용조건 입력</h3>
-
-        <div class="mt-6 space-y-5">
-          <div>
-            <label class="text-xs font-black text-gray-500">회원권</label>
-            <select id="calcMembership" class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold">
-              <option value="13750000">SILVER · 1,250만원 + VAT = 1,375만원</option>
-              <option value="19800000">GOLD · 1,800만원 + VAT = 1,980만원</option>
-              <option value="27500000">DIAMOND · 2,500만원 + VAT = 2,750만원</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="text-xs font-black text-gray-500">비교할 여행사 3박5일 상품 1인 총액</label>
-            <select id="calcPackagePreset" class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold">
-              <option value="1380000" data-air="1">2026년 11월 방콕 시내 다색 · 138만원</option>
-              <option value="1560000" data-air="1" selected>2026년 11월 방콕 시내 프리미엄 · 156만원</option>
-              <option value="617000" data-air="0">그린밸리·타나시티 현지팩 · 61.7만원</option>
-              <option value="custom">직접 입력</option>
-            </select>
-            <input id="calcPackageCustom" type="number" min="0" step="10000" value="1560000"
-              class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold hidden"
-              placeholder="비교 상품 총액" />
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-xs font-black text-gray-500">1년에 태국 골프 몇 번?</label>
-              <input id="calcTripsPerYear" type="number" min="1" max="20" value="2"
-                class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold" />
-            </div>
-            <div>
-              <label class="text-xs font-black text-gray-500">몇 년 이용할까요?</label>
-              <input id="calcYears" type="number" min="1" max="20" value="10"
-                class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold" />
-            </div>
-          </div>
-
-          <div>
-            <label class="text-xs font-black text-gray-500">회원 이용 방식</label>
-            <select id="calcStyle" class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold">
-              <option value="city" selected>방콕 시내형 · 3박5일 / 54홀</option>
-              <option value="khao">카오차녹 장박형 · 3박 / 54홀</option>
-            </select>
-          </div>
-
-          <div id="calcCityFields" class="space-y-4">
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label class="text-xs font-black text-gray-500">주중 18홀 횟수</label>
-                <input id="calcWeekdayRounds" type="number" min="0" max="10" value="3"
-                  class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold" />
-              </div>
-              <div>
-                <label class="text-xs font-black text-gray-500">주말 18홀 횟수</label>
-                <input id="calcWeekendRounds" type="number" min="0" max="10" value="0"
-                  class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold" />
-              </div>
-            </div>
-
-            <div>
-              <label class="text-xs font-black text-gray-500">카트·캐디·팁·송영 등 추가비용 / 1회 여행</label>
-              <input id="calcExtras" type="number" min="0" step="10000" value="180000"
-                class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold" />
-              <p class="text-[11px] text-gray-400 mt-2">예시값 18만원. 실제 구장·일정에 맞게 직접 수정하세요.</p>
-            </div>
-          </div>
-
-          <div id="calcKhaoInfo" class="hidden rounded-2xl bg-emerald-50 border border-emerald-100 p-5">
-            <div class="font-black text-emerald-900">카오차녹 예시</div>
-            <div class="text-sm text-gray-600 mt-2 leading-6">
-              1박 + 카트비 + 캐디피 + 팁 포함 약 <b>11.5만원</b> × 3박 = 약 <b>34.5만원</b>
-            </div>
-          </div>
-
-          <div>
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input id="calcPackageHasAir" type="checkbox" checked class="w-4 h-4" />
-              <span class="text-sm font-black">비교 여행사 상품에 항공권이 포함되어 있음</span>
-            </label>
-          </div>
-
-          <div id="calcAirfareWrap">
-            <label class="text-xs font-black text-gray-500">회원 이용 시 왕복 항공권 예상가</label>
-            <input id="calcAirfare" type="number" min="0" step="10000" value="400000"
-              class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold" />
-            <p class="text-[11px] text-gray-400 mt-2">예시값 40만원. 실제 항공권 가격으로 바꾸면 됩니다.</p>
-          </div>
-
-          <button id="calcBtn" type="button"
-            class="w-full bg-[#0B3D2E] text-white py-5 rounded-xl text-lg font-black">
-            내 조건으로 다시 계산
+          <button type="button"
+            class="duration-btn border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black transition hover:border-emerald-300"
+            data-nights="5" data-days="7" data-rounds="5" data-package="1970000">
+            <span class="block text-lg">5박7일</span>
+            <span class="block text-[10px] text-gray-400 mt-1">90홀</span>
           </button>
         </div>
+
+        <div class="mt-7 rounded-2xl bg-[#F7F9F8] border border-gray-100 p-5">
+          <div class="text-[11px] text-gray-400 font-black">여행사 패키지 1인 기준</div>
+          <div id="packagePresetLabel" class="text-2xl font-black mt-1">4박6일 약 175만원</div>
+          <p class="text-[11px] text-gray-400 mt-2">
+            실제 받은 견적이 다르면 아래 금액만 바꿔주세요.
+          </p>
+          <div class="flex items-center gap-2 mt-3">
+            <input id="calcPackagePrice" type="number" min="0" step="10000" value="1750000"
+              class="w-full p-4 rounded-xl bg-white border border-gray-100 font-black text-lg" />
+            <span class="font-black text-gray-500">원</span>
+          </div>
+        </div>
+
+        <div class="mt-7">
+          <div class="text-xs font-black text-emerald-700">STEP 2</div>
+          <h3 class="text-xl font-black mt-1">회원권 선택</h3>
+
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <button type="button"
+              class="membership-btn border-2 border-[#D8B56A] bg-[#FFF8E8] rounded-2xl p-4 text-left transition"
+              data-plan="GOLD" data-price="19800000">
+              <span class="block text-xs font-black text-amber-700">4인 추천</span>
+              <span class="block text-lg font-black mt-1">GOLD</span>
+              <span class="block text-[11px] text-gray-500 mt-1">기명1 + 무기명3</span>
+              <span class="block text-base font-black text-green mt-3">1,980만원</span>
+            </button>
+
+            <button type="button"
+              class="membership-btn border-2 border-gray-200 bg-white rounded-2xl p-4 text-left transition hover:border-emerald-300"
+              data-plan="DIAMOND" data-price="27500000">
+              <span class="block text-xs font-black text-emerald-700">무기명 4인</span>
+              <span class="block text-lg font-black mt-1">DIAMOND</span>
+              <span class="block text-[11px] text-gray-500 mt-1">법인·지인 활용</span>
+              <span class="block text-base font-black text-green mt-3">2,750만원</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-7">
+          <div class="text-xs font-black text-emerald-700">STEP 3</div>
+          <h3 class="text-xl font-black mt-1">회원 이용 시 항공권</h3>
+
+          <div class="grid grid-cols-3 gap-2 mt-4">
+            <button type="button" class="air-btn border-2 border-gray-200 rounded-xl py-3 font-black text-sm" data-air="300000">30만원</button>
+            <button type="button" class="air-btn border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-xl py-3 font-black text-sm" data-air="400000">40만원</button>
+            <button type="button" class="air-btn border-2 border-gray-200 rounded-xl py-3 font-black text-sm" data-air="500000">50만원</button>
+          </div>
+          <input id="calcAirfare" type="number" value="400000" class="hidden" />
+        </div>
+
+        <details class="mt-6 rounded-2xl border border-gray-200 p-5">
+          <summary class="font-black cursor-pointer flex justify-between items-center">
+            <span>주말 라운드 / 현지 별도비용 반영 <span class="text-xs text-gray-400 font-bold">(선택)</span></span>
+            <span class="text-gray-400">＋</span>
+          </summary>
+
+          <div class="mt-5 space-y-4">
+            <div>
+              <label class="text-xs font-black text-gray-500">주말 라운드 수</label>
+              <select id="calcWeekendRounds" class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold">
+                <option value="0">전부 주중</option>
+                <option value="1">주말 1회 포함</option>
+                <option value="2">주말 2회 포함</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-xs font-black text-gray-500">4인 팀 현지 별도비용</label>
+              <input id="calcTeamExtras" type="number" min="0" step="10000" value="0"
+                class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold"
+                placeholder="카트·캐디·팁·송영 등 실제 예상액" />
+              <p class="text-[11px] text-gray-400 mt-2">
+                정확한 비교가 필요할 때만 입력하세요. 기본 계산에는 넣지 않습니다.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <button id="calcBtn" type="button"
+          class="mt-7 w-full bg-[#0B3D2E] text-white py-5 rounded-xl text-lg font-black hover:bg-[#125B44] hover:-translate-y-0.5 transition-all duration-300 shadow-lg">
+          몇 번 가면 본전인지 확인
+        </button>
       </div>
 
-      <!-- RESULTS -->
-      <div class="space-y-4">
-        <div class="gold-panel rounded-3xl p-7 text-gray-900">
-          <div class="text-xs font-black text-amber-800">3박5일 · 1인 기준</div>
-          <div class="grid grid-cols-2 gap-4 mt-5">
+      <!-- RESULT -->
+      <div class="space-y-4 reveal lg:sticky lg:top-24">
+        <div id="calcResultCard" class="gold-panel rounded-3xl p-7 md:p-8 text-gray-900 shadow-2xl transition-all duration-500">
+          <div class="flex justify-between items-center gap-4">
             <div>
-              <div class="text-xs text-gray-500 font-bold">여행사 상품</div>
-              <div id="resultPackageTrip" class="text-3xl font-black mt-1">-</div>
+              <div class="text-xs font-black text-amber-800">4인 1팀 · <span id="resultDuration">4박6일</span></div>
+              <div class="text-sm text-gray-500 font-bold mt-1">한 번 갈 때 얼마나 차이날까요?</div>
             </div>
-            <div>
-              <div class="text-xs text-gray-500 font-bold">Five-Star 회원 이용</div>
-              <div id="resultMemberTrip" class="text-3xl font-black text-green mt-1">-</div>
+            <span class="text-[10px] bg-white/60 px-3 py-1.5 rounded-full font-black text-amber-900">TEAM OF 4</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mt-7">
+            <div class="rounded-2xl bg-white/70 p-5">
+              <div class="text-[11px] text-gray-500 font-black">여행사 패키지 · 4인</div>
+              <div id="resultPackageTeam" class="text-2xl md:text-3xl font-black mt-2">-</div>
+              <div id="resultPackagePerPerson" class="text-[11px] text-gray-400 mt-1">-</div>
+            </div>
+
+            <div class="rounded-2xl bg-white/70 p-5">
+              <div class="text-[11px] text-gray-500 font-black">Five-Star 회원 · 4인</div>
+              <div id="resultMemberTeam" class="text-2xl md:text-3xl font-black text-green mt-2">-</div>
+              <div id="resultMemberPerPerson" class="text-[11px] text-gray-400 mt-1">-</div>
             </div>
           </div>
 
-          <div class="mt-6 pt-5 border-t border-amber-900/10">
-            <div class="text-xs text-gray-500 font-bold">1회 이용 시 예상 절감액</div>
-            <div id="resultSavingTrip" class="text-4xl font-black text-amber-800 mt-1">-</div>
+          <div class="mt-7 pt-6 border-t border-amber-900/10 text-center">
+            <div class="text-xs text-gray-500 font-black">4명이 한 번 다녀오면</div>
+            <div id="resultSavingTeam" class="text-[42px] md:text-[54px] leading-tight font-black text-amber-800 mt-2">-</div>
+            <div id="resultSavingPercent" class="inline-block mt-3 bg-[#0B3D2E] text-white px-4 py-2 rounded-full text-xs font-black">-</div>
           </div>
         </div>
 
-        <div class="rounded-3xl bg-white/8 border border-white/10 p-7">
-          <div class="text-xs font-black text-[#F2D795]">회원권 구입비까지 포함</div>
-          <div class="mt-5 grid grid-cols-2 gap-5">
-            <div>
-              <div class="text-xs text-white/50">손익분기 이용횟수</div>
-              <div id="resultBreakEvenTrips" class="text-3xl font-black mt-1">-</div>
-            </div>
-            <div>
-              <div class="text-xs text-white/50">예상 회수기간</div>
-              <div id="resultBreakEvenYears" class="text-3xl font-black mt-1">-</div>
-            </div>
+        <div class="rounded-3xl bg-white/8 border border-white/10 p-7 backdrop-blur-sm">
+          <div class="text-xs font-black text-[#F2D795]">가장 중요한 숫자</div>
+          <div class="mt-4 text-center">
+            <div class="text-sm text-white/55 font-bold">이 회원권은 몇 번 가면 본전?</div>
+            <div id="resultBreakEvenTrips" class="text-[52px] leading-none font-black text-[#F2D795] mt-3">-</div>
+            <div id="resultBreakEvenSub" class="text-sm text-white/55 font-bold mt-3">-</div>
           </div>
         </div>
 
-        <div class="rounded-3xl bg-white/8 border border-white/10 p-7">
-          <div class="text-xs font-black text-[#F2D795]"><span id="resultYearsLabel">10년</span> 누적 예상</div>
-          <div class="mt-5 space-y-4 text-sm">
-            <div class="flex justify-between gap-4 border-b border-white/10 pb-3">
-              <span class="text-white/55">여행사 반복 이용</span>
-              <b id="resultPackageTotal">-</b>
-            </div>
-            <div class="flex justify-between gap-4 border-b border-white/10 pb-3">
-              <span class="text-white/55">회원권 + 회원 이용비</span>
-              <b id="resultMemberTotal">-</b>
-            </div>
-            <div class="flex justify-between gap-4 text-lg">
-              <span class="text-[#F2D795] font-black">누적 차이</span>
-              <b id="resultLongSaving" class="text-[#F2D795]">-</b>
-            </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-3xl bg-white/8 border border-white/10 p-6 text-center">
+            <div class="text-xs text-white/45 font-bold">5회 이용하면</div>
+            <div id="resultSaving5" class="text-2xl font-black text-[#F2D795] mt-2">-</div>
+            <div id="resultSaving5Net" class="text-[11px] text-white/40 mt-2">-</div>
+          </div>
+          <div class="rounded-3xl bg-white/8 border border-white/10 p-6 text-center">
+            <div class="text-xs text-white/45 font-bold">10회 이용하면</div>
+            <div id="resultSaving10" class="text-2xl font-black text-[#F2D795] mt-2">-</div>
+            <div id="resultSaving10Net" class="text-[11px] text-white/40 mt-2">-</div>
           </div>
         </div>
 
-        <div class="rounded-2xl border border-white/10 p-5 text-[11px] text-white/45 leading-5">
-          이 계산은 비교용 예시입니다. 여행사 상품마다 항공·카트·캐디·팁·식사·송영·골프장 등 포함조건이 달라
-          완전히 동일한 상품 비교가 아닐 수 있습니다. 회원권 구입비, VAT, 실제 항공권 및 추가비용을 포함해 직접 조정한 결과를 기준으로 판단하세요.
+        <div id="resultLongMessage" class="rounded-3xl p-6 text-center bg-[#F2D795] text-[#193428]">
+          <div class="text-xs font-black opacity-65">회원권 취득비까지 빼고 보면</div>
+          <div id="resultLongSaving" class="text-3xl font-black mt-2">-</div>
         </div>
+
+        <a href="#inquiry"
+          class="block rounded-2xl bg-[#F2D795] text-[#193428] p-5 text-center font-black hover:-translate-y-0.5 transition">
+          이 계산 결과로 상담받기 →
+        </a>
+
+        <p class="text-[11px] text-white/40 leading-5 px-1">
+          ※ 기본 비교는 여행사 패키지 총액과 회원 기본 이용가 + 선택한 항공료를 비교합니다.
+          카트·캐디·팁·송영 등 양쪽 모두 별도인 항목은 기본 비교에서 제외했습니다.
+        </p>
       </div>
     </div>
   </div>
@@ -459,8 +456,8 @@
   <div class="container">
     <div class="text-center max-w-3xl mx-auto">
       <div class="eyebrow text-emerald-700">5 COURSES · 99 HOLES</div>
-      <h2 class="title mt-3">5개 골프장, 실제 사진으로 보여주세요</h2>
-      <p class="desc mt-4">지금은 자리만 잡아뒀습니다. 네가 가진 실제 골프장 사진을 그대로 꽂으면 됩니다.</p>
+      <h2 class="title mt-3">5개 골프장, 실제 이용하는 5개 골프장</h2>
+      <p class="desc mt-4">그린밸리를 중심으로 방콕권 5개 구장을 회원가로 이용할 수 있습니다.</p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
@@ -510,8 +507,8 @@
   <div class="container max-w-4xl">
     <div class="text-center">
       <div class="eyebrow text-amber-700">MEMBER RATE</div>
-      <h2 class="title mt-3">회원 이용요금은 투명하게</h2>
-      <p class="desc mt-4">공식 이용약관 기준. 포함과 별도 비용을 나눠서 보여줍니다.</p>
+      <h2 class="title mt-3">회원가, 무엇이 포함되는지까지 확인하세요</h2>
+      <p class="desc mt-4">회원가만 보는 게 아니라 실제 현지에서 어떤 비용이 포함되고, 무엇이 별도인지까지 확인해야 합니다.</p>
     </div>
 
     <div class="mt-10 card shadow-soft overflow-hidden">
@@ -584,7 +581,7 @@
     <div class="text-center max-w-3xl mx-auto">
       <div class="eyebrow text-[#F2D795]">WHY TRUST</div>
       <h2 class="title mt-3">20년 회원자격 · 정회원증서 · 현지 소장</h2>
-      <p class="text-white/65 mt-4 text-sm leading-7 font-semibold">회원권은 가격만큼 실제 운영과 증빙이 중요합니다.</p>
+      <p class="text-white/65 mt-4 text-sm leading-7 font-semibold">회원권은 가격보다 실제 이용할 때 누가 끝까지 챙겨주는지가 더 중요합니다.</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
@@ -626,11 +623,10 @@
       <div class="img-slot min-h-[330px]">KIM DAEWOO PHOTO<br><br>김대우 팀장 실제 사진 자리</div>
       <div>
         <div class="eyebrow text-emerald-700">YOUR GOLF PARTNER</div>
-        <h2 class="title mt-3">회원권 하나 판매하고<br>끝내지 않습니다.</h2>
+        <h2 class="title mt-3">입회 후 실제 이용까지<br>제가 계속 챙기겠습니다.</h2>
         <p class="desc mt-5">
-          실제 이용 인원, 연간 방문 횟수, 장박 여부부터 보고
-          회원권이 맞는지 먼저 계산합니다.
-          입회하신다면 조건 확인부터 실제 이용까지 오래 챙기는 조력자가 되겠습니다.
+          부부 이용인지, 4인 이용인지, 장박인지부터 먼저 확인합니다.
+          입회가 맞는 경우에는 계약부터 예약, 실제 현지 이용까지 불편함 없도록 함께 보겠습니다.
         </p>
         <div class="mt-6 card p-6">
           <div class="font-black text-lg">🏌️ 골퍼따요 김대우 팀장</div>
@@ -646,12 +642,12 @@
   <div class="container max-w-5xl">
     <div class="grid md:grid-cols-[.82fr_1.18fr] gap-7 items-start">
       <div>
-        <div class="eyebrow text-emerald-700">CALCULATE MY BENEFIT</div>
-        <h2 class="title mt-3">내가 사면 이득인지<br>먼저 계산해보세요</h2>
+        <div class="eyebrow text-emerald-700">MEMBERSHIP CHECK</div>
+        <h2 class="title mt-3">내가 사면 이득인지<br>먼저 확인해보세요</h2>
         <p class="desc mt-4">
-          성함·연락처·관심 회원권만 남겨도 됩니다.
-          문자 상담 버튼을 누르면 김대우 팀장 번호로 문자 앱이 바로 열리고,
-          동시에 상담 정보가 서버를 통해 텔레그램으로 전송되도록 구성했습니다.
+          성함·연락처·관심 회원권만 남겨주세요.
+          이용 인원과 방문 횟수를 기준으로 어떤 구좌가 맞는지 먼저 비교해드리고,
+          실제 입회가 유리한 경우에만 상담을 이어가겠습니다.
         </p>
         <a href="http://pf.kakao.com/_xcxhFbs/chat" target="_blank" class="block mt-6 bg-yellow-400 text-black text-center font-black py-4 rounded-2xl">
           💬 카카오톡 바로 상담
@@ -659,7 +655,7 @@
       </div>
 
       <div class="card p-7 shadow-soft">
-        <h3 class="subtitle">빠른 상담 신청</h3>
+        <h3 class="subtitle">내게 맞는 회원권 상담</h3>
 
         <form id="consultForm" class="mt-6 space-y-4">
           <div>
@@ -718,8 +714,7 @@
         </form>
 
         <p class="text-[11px] text-gray-400 mt-4 leading-5">
-          ※ 텔레그램 전송은 /api/consult 서버 함수와 환경변수 설정 후 작동합니다.
-          Bot Token은 절대 HTML에 넣지 마세요.
+          ※ ※ 상담 내용 확인 후 김대우 팀장이 직접 연락드립니다.
         </p>
       </div>
     </div>
@@ -825,128 +820,221 @@
     }, 1200);
   });
 
-  // ===== COST CALCULATOR =====
+  // ===== SIMPLE 4-PERSON BREAK-EVEN CALCULATOR =====
   const KRW = new Intl.NumberFormat("ko-KR");
 
+  let calcState = {
+    nights: 4,
+    days: 6,
+    rounds: 4,
+    membershipPlan: "GOLD",
+    membershipPrice: 19800000
+  };
+
   function won(n) {
+    return `${KRW.format(Math.round(Number(n) || 0))}원`;
+  }
+
+  function shortWon(n) {
     const value = Math.round(Number(n) || 0);
-    return `${KRW.format(value)}원`;
+    const sign = value < 0 ? "-" : "";
+    const abs = Math.abs(value);
+    if (abs >= 100000000) return `${sign}${(abs / 100000000).toFixed(1)}억원`;
+    if (abs >= 10000) return `${sign}${KRW.format(Math.round(abs / 10000))}만원`;
+    return `${sign}${won(abs)}`;
   }
 
-  function readPackagePreset() {
-    const preset = document.getElementById("calcPackagePreset");
-    const option = preset.options[preset.selectedIndex];
+  function selectDuration(btn) {
+    document.querySelectorAll(".duration-btn").forEach(b => {
+      b.className = "duration-btn border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black transition hover:border-emerald-300";
+      const small = b.querySelector("span:last-child");
+      if (small) small.className = "block text-[10px] text-gray-400 mt-1";
+    });
 
-    if (preset.value === "custom") {
-      return Number(document.getElementById("calcPackageCustom").value) || 0;
-    }
-    return Number(preset.value) || 0;
-  }
+    btn.className = "duration-btn border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-2xl py-4 font-black transition";
+    const small = btn.querySelector("span:last-child");
+    if (small) small.className = "block text-[10px] opacity-60 mt-1";
 
-  function syncPackagePreset() {
-    const preset = document.getElementById("calcPackagePreset");
-    const custom = document.getElementById("calcPackageCustom");
-    const airCheck = document.getElementById("calcPackageHasAir");
+    calcState.nights = Number(btn.dataset.nights);
+    calcState.days = Number(btn.dataset.days);
+    calcState.rounds = Number(btn.dataset.rounds);
 
-    if (preset.value === "custom") {
-      custom.classList.remove("hidden");
-    } else {
-      custom.classList.add("hidden");
-      custom.value = preset.value;
-      const option = preset.options[preset.selectedIndex];
-      airCheck.checked = option.dataset.air === "1";
-    }
-    syncAirfareVisibility();
+    const packagePrice = Number(btn.dataset.package);
+    document.getElementById("calcPackagePrice").value = packagePrice;
+    document.getElementById("packagePresetLabel").textContent =
+      `${calcState.nights}박${calcState.days}일 약 ${KRW.format(Math.round(packagePrice / 10000))}만원`;
+
+    const weekendSelect = document.getElementById("calcWeekendRounds");
+    if (Number(weekendSelect.value) > calcState.rounds) weekendSelect.value = "0";
+
     calculateMembership();
   }
 
-  function syncStyleFields() {
-    const style = document.getElementById("calcStyle").value;
-    document.getElementById("calcCityFields").classList.toggle("hidden", style !== "city");
-    document.getElementById("calcKhaoInfo").classList.toggle("hidden", style !== "khao");
+  function selectMembership(btn) {
+    document.querySelectorAll(".membership-btn").forEach(b => {
+      b.classList.remove("border-[#D8B56A]", "bg-[#FFF8E8]");
+      b.classList.add("border-gray-200", "bg-white");
+    });
+
+    btn.classList.remove("border-gray-200", "bg-white");
+    btn.classList.add("border-[#D8B56A]", "bg-[#FFF8E8]");
+
+    calcState.membershipPlan = btn.dataset.plan;
+    calcState.membershipPrice = Number(btn.dataset.price);
     calculateMembership();
   }
 
-  function syncAirfareVisibility() {
-    const includeAir = document.getElementById("calcPackageHasAir").checked;
-    document.getElementById("calcAirfareWrap").classList.toggle("hidden", !includeAir);
+  function selectAir(btn) {
+    document.querySelectorAll(".air-btn").forEach(b => {
+      b.classList.remove("border-[#0B3D2E]", "bg-[#0B3D2E]", "text-white");
+      b.classList.add("border-gray-200");
+    });
+
+    btn.classList.remove("border-gray-200");
+    btn.classList.add("border-[#0B3D2E]", "bg-[#0B3D2E]", "text-white");
+
+    document.getElementById("calcAirfare").value = btn.dataset.air;
     calculateMembership();
   }
 
   function calculateMembership() {
-    const membershipPrice = Number(document.getElementById("calcMembership").value) || 0;
-    const packageTrip = readPackagePreset();
-    const tripsPerYear = Math.max(1, Number(document.getElementById("calcTripsPerYear").value) || 1);
-    const years = Math.max(1, Number(document.getElementById("calcYears").value) || 1);
-    const style = document.getElementById("calcStyle").value;
-    const packageHasAir = document.getElementById("calcPackageHasAir").checked;
-    const airfare = packageHasAir ? (Number(document.getElementById("calcAirfare").value) || 0) : 0;
+    const packagePerPerson = Number(document.getElementById("calcPackagePrice").value) || 0;
+    const airfarePerPerson = Number(document.getElementById("calcAirfare").value) || 0;
+    const teamExtras = Number(document.getElementById("calcTeamExtras").value) || 0;
 
-    let memberLocal = 0;
+    const weekendRounds = Math.min(
+      calcState.rounds,
+      Math.max(0, Number(document.getElementById("calcWeekendRounds").value) || 0)
+    );
+    const weekdayRounds = Math.max(0, calcState.rounds - weekendRounds);
 
-    if (style === "khao") {
-      memberLocal = 115000 * 3;
-    } else {
-      const weekdayRounds = Math.max(0, Number(document.getElementById("calcWeekdayRounds").value) || 0);
-      const weekendRounds = Math.max(0, Number(document.getElementById("calcWeekendRounds").value) || 0);
-      const extras = Math.max(0, Number(document.getElementById("calcExtras").value) || 0);
-      memberLocal = weekdayRounds * 89000 + weekendRounds * 118000 + extras;
-    }
+    // Package: entered 1-person total × 4
+    const packageTeam = packagePerPerson * 4;
 
-    const memberTrip = memberLocal + airfare;
-    const savingPerTrip = packageTrip - memberTrip;
-    const totalTrips = tripsPerYear * years;
+    // Member: 89,000 weekday / 118,000 weekend per person per 18-hole day + airfare
+    const memberLocalPerPerson = weekdayRounds * 89000 + weekendRounds * 118000;
+    const memberPerPerson = memberLocalPerPerson + airfarePerPerson;
+    const memberTeam = memberPerPerson * 4 + teamExtras;
+
+    const savingPerTrip = packageTeam - memberTeam;
+    const savingPct = packageTeam > 0 ? (savingPerTrip / packageTeam) * 100 : 0;
 
     let breakEvenTrips = null;
-    let breakEvenYears = null;
     if (savingPerTrip > 0) {
-      breakEvenTrips = Math.ceil(membershipPrice / savingPerTrip);
-      breakEvenYears = breakEvenTrips / tripsPerYear;
+      breakEvenTrips = Math.ceil(calcState.membershipPrice / savingPerTrip);
     }
 
-    const packageTotal = packageTrip * totalTrips;
-    const memberTotal = membershipPrice + memberTrip * totalTrips;
-    const longSaving = packageTotal - memberTotal;
+    const saving5Gross = savingPerTrip * 5;
+    const saving10Gross = savingPerTrip * 10;
+    const saving5Net = saving5Gross - calcState.membershipPrice;
+    const saving10Net = saving10Gross - calcState.membershipPrice;
 
-    document.getElementById("resultPackageTrip").textContent = won(packageTrip);
-    document.getElementById("resultMemberTrip").textContent = won(memberTrip);
-    document.getElementById("resultSavingTrip").textContent =
-      savingPerTrip >= 0 ? `${won(savingPerTrip)} 절감` : `${won(Math.abs(savingPerTrip))} 추가`;
+    document.getElementById("resultDuration").textContent = `${calcState.nights}박${calcState.days}일`;
+    document.getElementById("resultPackageTeam").textContent = shortWon(packageTeam);
+    document.getElementById("resultPackagePerPerson").textContent = `1인 약 ${shortWon(packagePerPerson)}`;
+    document.getElementById("resultMemberTeam").textContent = shortWon(memberTeam);
+    document.getElementById("resultMemberPerPerson").textContent = `1인 약 ${shortWon(memberTeam / 4)}`;
 
-    document.getElementById("resultSavingTrip").className =
-      savingPerTrip >= 0
-        ? "text-4xl font-black text-amber-800 mt-1"
-        : "text-3xl font-black text-red-600 mt-1";
+    const savingEl = document.getElementById("resultSavingTeam");
+    const pctEl = document.getElementById("resultSavingPercent");
+
+    if (savingPerTrip >= 0) {
+      savingEl.textContent = `${shortWon(savingPerTrip)} 절감`;
+      savingEl.className = "text-[42px] md:text-[54px] leading-tight font-black text-amber-800 mt-2";
+      pctEl.textContent = `패키지 대비 약 ${Math.max(0, savingPct).toFixed(0)}% 차이`;
+    } else {
+      savingEl.textContent = `${shortWon(Math.abs(savingPerTrip))} 더 필요`;
+      savingEl.className = "text-[36px] md:text-[44px] leading-tight font-black text-red-600 mt-2";
+      pctEl.textContent = "현재 조건에서는 패키지가 더 저렴합니다";
+    }
 
     document.getElementById("resultBreakEvenTrips").textContent =
-      breakEvenTrips ? `약 ${KRW.format(breakEvenTrips)}회` : "회수 어려움";
+      breakEvenTrips ? `약 ${breakEvenTrips}회` : "-";
 
-    document.getElementById("resultBreakEvenYears").textContent =
-      breakEvenYears ? `약 ${breakEvenYears.toFixed(1)}년` : "-";
+    document.getElementById("resultBreakEvenSub").textContent =
+      breakEvenTrips
+        ? `4인 1팀이 약 ${breakEvenTrips}번 이용하면 ${calcState.membershipPlan} 취득비에 근접`
+        : "현재 조건에서는 회원권 취득비 회수가 어렵습니다.";
 
-    document.getElementById("resultYearsLabel").textContent = `${years}년`;
-    document.getElementById("resultPackageTotal").textContent = won(packageTotal);
-    document.getElementById("resultMemberTotal").textContent = won(memberTotal);
-    document.getElementById("resultLongSaving").textContent =
-      longSaving >= 0 ? `${won(longSaving)} 절감` : `${won(Math.abs(longSaving))} 추가`;
+    document.getElementById("resultSaving5").textContent =
+      savingPerTrip > 0 ? `${shortWon(saving5Gross)} 절감` : "-";
+    document.getElementById("resultSaving10").textContent =
+      savingPerTrip > 0 ? `${shortWon(saving10Gross)} 절감` : "-";
+
+    document.getElementById("resultSaving5Net").textContent =
+      savingPerTrip > 0
+        ? (saving5Net >= 0
+            ? `회원권 비용 제외 후 +${shortWon(saving5Net)}`
+            : `회원권 비용까지는 ${shortWon(Math.abs(saving5Net))} 부족`)
+        : "";
+
+    document.getElementById("resultSaving10Net").textContent =
+      savingPerTrip > 0
+        ? (saving10Net >= 0
+            ? `회원권 비용 제외 후 +${shortWon(saving10Net)}`
+            : `회원권 비용까지는 ${shortWon(Math.abs(saving10Net))} 부족`)
+        : "";
+
+    const longMessage = document.getElementById("resultLongMessage");
+    const longSavingEl = document.getElementById("resultLongSaving");
+
+    if (saving10Net >= 0) {
+      longSavingEl.textContent = `10회 이용 시 약 ${shortWon(saving10Net)} 남습니다`;
+      longMessage.className = "rounded-3xl p-6 text-center bg-[#F2D795] text-[#193428]";
+    } else if (savingPerTrip > 0) {
+      longSavingEl.textContent = `10회 이용해도 약 ${shortWon(Math.abs(saving10Net))} 부족합니다`;
+      longMessage.className = "rounded-3xl p-6 text-center bg-white/8 border border-white/10 text-white";
+    } else {
+      longSavingEl.textContent = "현재 조건에서는 회원권 절감효과가 없습니다";
+      longMessage.className = "rounded-3xl p-6 text-center bg-red-500/15 border border-red-400/20 text-red-100";
+    }
+
+    const card = document.getElementById("calcResultCard");
+    card.classList.remove("scale-[1.015]");
+    requestAnimationFrame(() => {
+      card.classList.add("scale-[1.015]");
+      setTimeout(() => card.classList.remove("scale-[1.015]"), 280);
+    });
   }
 
-  [
-    "calcMembership","calcTripsPerYear","calcYears","calcPackageCustom",
-    "calcWeekdayRounds","calcWeekendRounds","calcExtras","calcAirfare"
-  ].forEach(id => {
+  document.querySelectorAll(".duration-btn").forEach(btn =>
+    btn.addEventListener("click", () => selectDuration(btn))
+  );
+
+  document.querySelectorAll(".membership-btn").forEach(btn =>
+    btn.addEventListener("click", () => selectMembership(btn))
+  );
+
+  document.querySelectorAll(".air-btn").forEach(btn =>
+    btn.addEventListener("click", () => selectAir(btn))
+  );
+
+  ["calcPackagePrice", "calcTeamExtras", "calcWeekendRounds"].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener("input", calculateMembership);
-    if (el) el.addEventListener("change", calculateMembership);
+    if (el) {
+      el.addEventListener("input", calculateMembership);
+      el.addEventListener("change", calculateMembership);
+    }
   });
 
-  document.getElementById("calcPackagePreset").addEventListener("change", syncPackagePreset);
-  document.getElementById("calcStyle").addEventListener("change", syncStyleFields);
-  document.getElementById("calcPackageHasAir").addEventListener("change", syncAirfareVisibility);
   document.getElementById("calcBtn").addEventListener("click", calculateMembership);
 
-  syncPackagePreset();
-  syncStyleFields();
+  // subtle reveal animation
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("opacity-100", "translate-y-0");
+        entry.target.classList.remove("opacity-0", "translate-y-4");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(el => {
+    el.classList.add("opacity-0", "translate-y-4", "transition-all", "duration-700");
+    revealObserver.observe(el);
+  });
+
   calculateMembership();
 
 </script>
