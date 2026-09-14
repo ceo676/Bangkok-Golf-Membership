@@ -196,7 +196,7 @@
       <div class="text-[10px] font-black tracking-[.18em] text-emerald-700">BANGKOK GOLF MEMBERSHIP</div>
       <div class="text-sm md:text-base font-black text-green">GREEN VALLEY FIVE-STAR</div>
     </div>
-    <a href="#calculator" class="bg-green text-white px-5 py-2.5 rounded-xl text-sm font-black">내 절감액 계산</a>
+    <a href="#calculator" class="bg-green text-white px-5 py-2.5 rounded-xl text-sm font-black">회원가 계산</a>
   </div>
 </nav>
 
@@ -775,6 +775,18 @@
           <div id="resultLongSaving" class="text-3xl font-black mt-2">-</div>
         </div>
 
+        <div class="glass rounded-3xl p-6 text-center">
+          <div class="text-sm font-black text-[#F2D795]">이 금액, 같이 갈 분께 보내보세요</div>
+          <p class="text-xs text-white/45 mt-2">4인 팀이라면 함께 비교해보는 게 가장 빠릅니다.</p>
+          <button
+            type="button"
+            class="share-btn mt-4 w-full rounded-2xl border border-white/15 bg-white/10 text-white p-4 font-black hover:bg-white/15 transition"
+            data-share-context="calculator"
+          >
+            📤 4인 팀에게 공유하기
+          </button>
+        </div>
+
         <a href="#inquiry" class="block rounded-2xl bg-[#F2D795] text-[#193428] p-5 text-center font-black">
           이 계산 결과로 상담받기 →
         </a>
@@ -1306,6 +1318,17 @@
       <a href="tel:01025991095" class="border border-white/20 bg-white/10 px-8 py-4 rounded-2xl font-black">김대우 팀장에게 바로 문의</a>
     </div>
 
+    <div class="mt-5 max-w-xl mx-auto">
+      <p class="text-sm text-white/55 font-semibold">혼자 결정하지 마세요. 같이 갈 분과 먼저 비교해보세요.</p>
+      <button
+        type="button"
+        class="share-btn mt-3 w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white font-black hover:bg-white/15 transition"
+        data-share-context="page"
+      >
+        🔗 이 페이지 공유하기
+      </button>
+    </div>
+
     <div class="mt-8 text-white/75 font-black">
       조건이 맞지 않으면 굳이 입회하실 필요 없습니다.<br>
       맞는 분이라면, 입회부터 실제 이용까지 제가 직접 챙기겠습니다.
@@ -1535,6 +1558,61 @@
         count.textContent = `${index + 1} / ${slides.length}`;
       }, 80);
     }, { passive:true });
+  });
+
+
+  // ===== SHARE =====
+  async function shareLanding(context) {
+    const pageUrl = window.location.href.split("#")[0];
+
+    let title = "방콕 그린밸리 Five-Star 회원권";
+    let text = "비싸지는 태국 겨울골프, 회원가로 얼마나 절감되는지 같이 비교해보세요.";
+
+    if (context === "calculator") {
+      const duration = document.getElementById("resultDuration")?.textContent?.trim() || "";
+      const saving = document.getElementById("resultSavingTeam")?.textContent?.trim() || "";
+      const breakEven = document.getElementById("resultBreakEvenTrips")?.textContent?.trim() || "";
+
+      text = [
+        `방콕 그린밸리 Five-Star 회원권 계산 결과`,
+        duration ? `일정: ${duration}` : "",
+        saving ? `4인 1팀 예상 차이: ${saving}` : "",
+        breakEven && breakEven !== "-" ? `회원권 가격 회수 예상: ${breakEven}` : "",
+        "같이 갈 분과 한번 비교해보세요."
+      ].filter(Boolean).join("\n");
+    }
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, text, url: pageUrl });
+        return;
+      } catch (err) {
+        if (err?.name === "AbortError") return;
+      }
+    }
+
+    const fallbackText = `${text}\n${pageUrl}`;
+
+    try {
+      await navigator.clipboard.writeText(fallbackText);
+      alert("공유할 내용과 링크를 복사했습니다.");
+    } catch (err) {
+      const temp = document.createElement("textarea");
+      temp.value = fallbackText;
+      temp.style.position = "fixed";
+      temp.style.opacity = "0";
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand("copy");
+      temp.remove();
+      alert("공유할 내용과 링크를 복사했습니다.");
+    }
+  }
+
+  document.querySelectorAll(".share-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      shareLanding(btn.dataset.shareContext || "page");
+    });
   });
 
   calculateMembership();
