@@ -2,35 +2,35 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="비싸지는 태국 겨울골프, 다시 8만원대로. 그린밸리 Five-Star 회원권 · 5개 구장 99홀 · 장박·부부·법인 무기명 상담. 비싸지는 태국 겨울골프를 회원가로 다시." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="비싸진 태국 겨울골프를 회원가로 다시. 그린밸리 Five-Star 회원권, 5개 구장 99홀, 4인 팀 절감액 계산, 실버·골드·다이아몬드 상담." />
+  <meta name="theme-color" content="#0B3D2E" />
   <title>Bangkok Golf Membership | Green Valley Five-Star</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
       --green:#0B3D2E;
-      --green2:#155A43;
+      --green2:#145742;
       --green3:#EAF5EF;
       --gold:#D8B56A;
       --gold2:#F4E3B9;
       --ink:#12201A;
-      --muted:#69756F;
+      --muted:#6A766F;
       --line:#E7ECE9;
       --cream:#FBF8F0;
-      --red:#D34A3E;
-      --red2:#FFF1EE;
+      --red:#D64A3F;
     }
     html{scroll-behavior:smooth}
     body{
       font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Apple SD Gothic Neo",sans-serif;
-      color:var(--ink); background:#fff; -webkit-text-size-adjust:100%;
+      color:var(--ink);background:#fff;-webkit-text-size-adjust:100%;word-break:keep-all;
     }
     .container{max-width:1120px;margin:0 auto}
     .section{padding:76px 20px;border-bottom:1px solid var(--line)}
     .eyebrow{font-size:12px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}
-    .title{font-size:36px;line-height:1.18;font-weight:950;letter-spacing:-.05em}
+    .title{font-size:36px;line-height:1.18;font-weight:950;letter-spacing:-.05em;text-wrap:balance}
     .subtitle{font-size:23px;line-height:1.32;font-weight:950;letter-spacing:-.035em}
-    .body{font-size:16px;line-height:1.75;font-weight:650}
+    .body{font-size:16px;line-height:1.76;font-weight:650}
     .desc{font-size:14px;line-height:1.75;color:var(--muted);font-weight:560}
     .card{border:1px solid var(--line);border-radius:26px;background:#fff}
     .shadow-soft{box-shadow:0 20px 60px rgba(11,61,46,.11)}
@@ -39,37 +39,76 @@
     .text-gold{color:var(--gold)}
     .hero{
       background:
-        radial-gradient(circle at 83% 18%, rgba(216,181,106,.18), transparent 25%),
+        radial-gradient(circle at 86% 14%, rgba(216,181,106,.20), transparent 26%),
         linear-gradient(135deg,#061F18 0%,#0B3D2E 58%,#16513D 100%);
     }
-    .pill{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;padding:.45rem .75rem;font-size:12px;font-weight:900}
-    .img-slot{
-      aspect-ratio:16/10;border:1.5px dashed #99B4A7;border-radius:22px;
-      background:linear-gradient(135deg,#F5F8F6,#EDF3F0);
-      display:flex;align-items:center;justify-content:center;text-align:center;
-      padding:22px;color:#6E7E76;font-size:13px;font-weight:850;
-    }
+    .pill{display:inline-flex;align-items:center;gap:.42rem;border-radius:999px;padding:.47rem .78rem;font-size:12px;font-weight:900}
     .metric{border-radius:24px;border:1px solid var(--line);background:#fff;padding:22px}
-    .sticky{
-      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-      background:rgba(255,255,255,.93)
-    }
-    .price-card{transition:.25s ease}
-    .price-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(11,61,46,.12)}
     .good{background:#EEF8F2;border:1px solid #BAD9C7}
     .bad{background:#FFF3F1;border:1px solid #F0C8C3}
-    .gold-panel{background:linear-gradient(135deg,#FFF8E8,#F6E5B5)}
-    .cta-glow{box-shadow:0 12px 30px rgba(216,181,106,.28)}
-    summary::-webkit-details-marker{display:none}
+    .gold-panel{background:linear-gradient(135deg,#FFF8E8,#F3DEAA)}
+    .glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+    .sticky{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.93)}
+    .tap-card{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+    .tap-card:active{transform:scale(.985)}
+    .focus-number{position:relative;display:inline-block}
+    .focus-number::after{
+      content:"";position:absolute;left:5%;right:5%;bottom:-5px;height:7px;border-radius:999px;
+      background:linear-gradient(90deg,transparent,rgba(216,181,106,.78),transparent);filter:blur(3px)
+    }
+    @keyframes softPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
+    @keyframes floatUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+    @keyframes sheen{0%{background-position:200% center}100%{background-position:-200% center}}
+    .pulse-cta{animation:softPulse 2.8s ease-in-out infinite}
+    .float-soft{animation:floatUp 5s ease-in-out infinite}
+    .gold-sheen{
+      background:linear-gradient(90deg,#f2d38e 0%,#fff1c8 35%,#d8b56a 55%,#fff1c8 72%,#f2d38e 100%);
+      background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+      animation:sheen 4.5s linear infinite
+    }
+    details summary{list-style:none}
+    details summary::-webkit-details-marker{display:none}
     @media(max-width:767px){
-      .section{padding:54px 18px}
-      .title{font-size:29px}
+      body{padding-bottom:82px}
+      .section{padding:50px 16px}
+      .title{font-size:28px;line-height:1.22}
       .subtitle{font-size:20px}
       .body{font-size:15px}
+      .desc{font-size:13.5px}
+      .eyebrow{font-size:10px;letter-spacing:.13em}
+      .card{border-radius:20px}
+      .metric{padding:16px 12px;border-radius:18px}
+      .hero{padding-top:96px;padding-bottom:54px}
+      .hero-title{font-size:43px;line-height:1.02;letter-spacing:-.065em;font-weight:950}
+      .hero-price{font-size:41px;line-height:1;font-weight:950}
+      .hero-copy{font-size:14px;line-height:1.75}
+      .hero-actions{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+      .hero-actions a{width:100%;padding:15px 16px!important}
+      .hero-media img{min-height:250px!important;max-height:290px;object-position:center}
+      .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+      .course-grid,.hotel-grid,.membership-grid{grid-template-columns:1fr!important}
+      .trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+      .mobile-stack,.calc-layout,.result-grid{grid-template-columns:1fr!important}
+      .calc-sticky{position:static!important;top:auto!important}
+      .duration-wrap{display:flex!important;overflow-x:auto;gap:10px;padding-bottom:4px;scroll-snap-type:x mandatory;scrollbar-width:none}
+      .duration-wrap::-webkit-scrollbar{display:none}
+      .duration-btn{min-width:112px;flex:0 0 112px;scroll-snap-align:start}
+      .membership-choice{grid-template-columns:1fr 1fr!important}
+      .air-choice{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+      .calc-input-card,.calc-result-card{padding:20px!important;border-radius:22px!important}
+      .big-saving{font-size:40px!important}
+      .break-even{font-size:46px!important}
+      .desktop-only{display:none!important}
+    }
+    @media(max-width:390px){
+      .hero-title{font-size:39px}.hero-price{font-size:37px}.title{font-size:26px}
+      .duration-btn{min-width:105px;flex-basis:105px}.air-btn{font-size:12px!important}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
     }
   </style>
 </head>
-
 <body class="antialiased">
 
 <!-- NAV -->
@@ -79,110 +118,115 @@
       <div class="text-[10px] font-black tracking-[.18em] text-emerald-700">BANGKOK GOLF MEMBERSHIP</div>
       <div class="text-sm md:text-base font-black text-green">GREEN VALLEY FIVE-STAR</div>
     </div>
-    <a href="#inquiry" class="bg-green text-white px-5 py-2.5 rounded-xl text-sm font-black">내 이득 계산하기</a>
+    <a href="#calculator" class="bg-green text-white px-5 py-2.5 rounded-xl text-sm font-black">내 절감액 계산</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero text-white pt-28 pb-20 overflow-hidden">
-  <div class="container px-5 grid md:grid-cols-[1.03fr_.97fr] gap-10 items-center">
-    <div>
-      <div class="inline-flex items-center gap-2 text-sm font-black text-[#F4DCA2]">
-        📈 비싸지는 태국 겨울골프
-      </div>
+  <div class="container px-5 grid md:grid-cols-[1.04fr_.96fr] gap-10 items-center">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 text-[13px] font-black text-[#F4DCA2]">📈 비싸지는 태국 겨울골프</div>
 
-      <h1 class="mt-4 text-[46px] md:text-[68px] leading-[1.02] font-black tracking-[-.06em]">
-        다시 <span class="text-[#F1D38E]">8만원대로</span>
+      <h1 class="hero-title mt-4 text-[46px] md:text-[68px] leading-[1.02] font-black tracking-[-.06em]">
+        다시 <span class="gold-sheen focus-number">8만원대로.</span>
       </h1>
 
       <div class="mt-6 flex items-end gap-3 flex-wrap">
-        <span class="text-white/70 text-sm font-bold mb-2">주중</span>
-        <span class="text-[42px] md:text-[52px] font-black tracking-[-.05em]">89,000원</span>
+        <span class="text-white/60 text-sm font-bold mb-2">주중</span>
+        <span class="hero-price gold-sheen focus-number">89,000원</span>
       </div>
 
-      <div class="mt-3 text-lg md:text-xl font-black text-white">
-        ⛳ 골프 + 🏨 숙박 + 🍽️ 식사 포함
-      </div>
+      <div class="mt-3 text-lg md:text-xl font-black">⛳ 골프 + 🏨 숙박 + 🍽️ 식사까지 한 번에</div>
 
-      <p class="mt-6 max-w-xl text-white/72 leading-8 font-semibold">
-        태국 골프가 예전만큼 저렴하지 않다는 말, 많이 들으셨을 겁니다.
-        Five-Star는 매년 오르는 성수기 비용을 그대로 따라가는 대신
-        회원가로 5개 구장을 반복 이용할 수 있게 만든 회원권입니다.
+      <p class="hero-copy mt-6 max-w-xl text-white/75 leading-8 font-semibold">
+        태국 골프가 예전처럼 저렴하지 않다는 이야기, 많이 들으셨을 겁니다.
+        겨울 성수기마다 오르는 비용을 그대로 지불하는 대신,
+        <b class="text-white">그린밸리 Five-Star 회원권으로 방콕 5개 골프장을 회원가로 이용하세요.</b>
+      </p>
+
+      <p class="mt-4 max-w-xl text-sm text-white/60 leading-7 font-semibold">
+        그린밸리 정회원권을 기반으로 부부골프부터 4인 모임, 법인 무기명 이용, 장박골프까지 활용할 수 있습니다.
       </p>
 
       <div class="mt-7 flex flex-wrap gap-2">
-        <span class="pill bg-white text-green">5개 구장 · 총 99홀</span>
+        <span class="pill bg-white text-green">5개 골프장 · 총 99홀</span>
         <span class="pill bg-[#F2D38E] text-[#4C3A12]">SILVER · GOLD · DIAMOND</span>
         <span class="pill bg-white/10 border border-white/15 text-white">정회원권 · 증서 발급</span>
       </div>
 
-      <div class="mt-8 p-4 rounded-2xl border border-[#F2D38E]/30 bg-black/15 max-w-xl">
+      <div class="mt-7 p-4 rounded-2xl border border-[#F2D38E]/30 bg-black/15 max-w-xl">
         <div class="text-[#F4DCA2] font-black">🎁 선착순 3인 · 90만원 상당 특별혜택</div>
-        <div class="text-xs text-white/65 mt-1">골퍼따요 김대우 팀장 단독 제공 · 세부 혜택 입회 후 안내</div>
+        <div class="text-xs text-white/60 mt-1">골퍼따요 김대우 팀장 단독 제공</div>
       </div>
 
-      <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#calculator" class="bg-[#F2D38E] text-[#193428] px-7 py-4 rounded-2xl font-black text-center cta-glow hover:-translate-y-0.5 transition">
-          몇 번 가면 본전인지 바로 보기
+      <div class="hero-actions mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#calculator" class="pulse-cta bg-[#F2D38E] text-[#193428] px-7 py-4 rounded-2xl font-black text-center shadow-lg">
+          몇 번 가면 본전인지 계산하기
         </a>
         <a href="tel:01025991095" class="border border-white/25 bg-white/10 px-7 py-4 rounded-2xl font-black text-center">
-          010-2599-1095
+          김대우 팀장에게 문의
         </a>
       </div>
     </div>
 
-    <div>
-      <div class="rounded-[28px] overflow-hidden shadow-2xl border border-white/10 min-h-[390px]">
-        <img src="./images/hero.jpg"
-             alt="방콕 그린밸리 Five-Star 골프회원권 대표 이미지"
-             class="w-full h-full min-h-[390px] object-cover" />
-      </div>
+    <div class="hero-media float-soft rounded-[28px] overflow-hidden shadow-2xl border border-white/10 reveal">
+      <img src="./images/hero.jpg" alt="방콕 그린밸리 Five-Star 골프회원권" class="w-full h-full min-h-[390px] object-cover" />
     </div>
   </div>
 </header>
 
-<!-- TRUST SNAPSHOT -->
+<!-- QUICK TRUST -->
 <section class="bg-[#F7F8F5] border-b border-gray-100">
-  <div class="container px-5 py-8 grid grid-cols-2 md:grid-cols-4 gap-3">
-    <div class="metric text-center"><div class="text-2xl">⛳</div><div class="font-black mt-2">5개 구장</div><div class="text-xs text-gray-500 mt-1">회원가 연계</div></div>
-    <div class="metric text-center"><div class="text-2xl">99</div><div class="font-black mt-2">총 99홀</div><div class="text-xs text-gray-500 mt-1">다양한 코스 선택</div></div>
+  <div class="quick-grid container px-5 py-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="metric text-center"><div class="text-2xl">⛳</div><div class="font-black mt-2">5개 골프장</div><div class="text-xs text-gray-500 mt-1">한 곳만 반복하지 않게</div></div>
+    <div class="metric text-center"><div class="text-2xl font-black text-green">99</div><div class="font-black mt-2">총 99홀</div><div class="text-xs text-gray-500 mt-1">다양한 코스 선택</div></div>
     <div class="metric text-center"><div class="text-2xl">📄</div><div class="font-black mt-2">20년 회원자격</div><div class="text-xs text-gray-500 mt-1">약관 기준</div></div>
-    <div class="metric text-center"><div class="text-2xl">🤝</div><div class="font-black mt-2">현지 소장 운영</div><div class="text-xs text-gray-500 mt-1">구장별 현지 대응</div></div>
+    <div class="metric text-center"><div class="text-2xl">🤝</div><div class="font-black mt-2">현지 운영 지원</div><div class="text-xs text-gray-500 mt-1">실제 이용까지 연계</div></div>
   </div>
 </section>
 
 <!-- PROBLEM -->
 <section class="section bg-white" id="problem">
   <div class="container">
-    <div class="text-center max-w-3xl mx-auto">
-      <div class="eyebrow text-red-500">THE PROBLEM</div>
-      <h2 class="title mt-3">태국 골프가 왜 이렇게 비싸졌지?</h2>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="eyebrow text-red-500">WHY MEMBERSHIP</div>
+      <h2 class="title mt-3">태국 골프, 왜 이렇게 비싸졌을까요?</h2>
       <p class="desc mt-4">
-        겨울 성수기에는 그린피뿐 아니라 숙박·이동·식사비가 함께 오릅니다.
-        “한국이랑 별 차이 없다”, “오히려 더 비싸다”는 부담이 커질수록
-        장박과 반복 방문 골퍼에게는 회원가 구조가 더 중요해집니다.
+        예전에는 “태국은 싸게 골프 치러 가는 곳”이라는 인식이 강했습니다.
+        그런데 겨울 성수기에는 골프비·호텔비·항공료가 함께 오르면서
+        “한국이랑 별 차이 없다”, “태국도 이제 너무 비싸다”는 부담이 커지고 있습니다.
+      </p>
+      <p class="desc mt-3">
+        특히 매년 겨울 태국을 찾거나 한 번 가면 1~2주 이상 머무르는 분이라면
+        이 차이는 한 번이 아니라 계속 누적됩니다.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-5 mt-10">
+    <div class="grid md:grid-cols-2 gap-5 mt-10 reveal">
       <div class="bad rounded-3xl p-7">
-        <div class="font-black text-red-600">❌ 일반 겨울 골프</div>
+        <div class="font-black text-red-600">매번 패키지로 간다면</div>
         <ul class="mt-5 space-y-3 text-sm font-semibold text-gray-700">
-          <li>• 성수기 그린피가 계속 오른다</li>
-          <li>• 호텔·식사·송영을 매번 다시 계산한다</li>
-          <li>• 장박할수록 체류비 누적이 커진다</li>
-          <li>• 예약 시점마다 가격 변동폭이 크다</li>
+          <li>• 성수기마다 달라지는 상품가격</li>
+          <li>• 항공·호텔 가격 상승 그대로 반영</li>
+          <li>• 갈 때마다 골프장과 일정을 다시 선택</li>
+          <li>• 4명이 움직이면 작은 가격 차이도 크게 누적</li>
         </ul>
       </div>
+
       <div class="good rounded-3xl p-7">
-        <div class="font-black text-green">✓ Five-Star 회원가</div>
+        <div class="font-black text-green">Five-Star 회원이라면</div>
         <ul class="mt-5 space-y-3 text-sm font-semibold text-gray-700">
-          <li>• 5개 구장 회원가 이용</li>
-          <li>• 주중 89,000원에 그린피·숙박·식사</li>
-          <li>• 장박형과 시내형으로 나눠 설계</li>
-          <li>• 이용 인원에 맞춰 SILVER/GOLD/DIAMOND 선택</li>
+          <li>• 5개 골프장을 회원가로 이용</li>
+          <li>• 골프·숙박·식사가 포함된 회원 이용구조</li>
+          <li>• 부부·4인·법인에 맞는 회원권 선택</li>
+          <li>• 반복 이용할수록 회원권 활용가치 증가</li>
         </ul>
       </div>
+    </div>
+
+    <div class="mt-7 text-center font-black text-green reveal">
+      태국 골프를 한 번 가는 분보다, 계속 가는 분에게 필요한 회원권입니다.
     </div>
   </div>
 </section>
@@ -190,21 +234,25 @@
 <!-- SOLUTION -->
 <section class="section bg-[#FBFAF5]" id="solution">
   <div class="container">
-    <div class="grid md:grid-cols-[.92fr_1.08fr] gap-8 items-center">
-      <div>
-        <div class="eyebrow text-emerald-700">THE SOLUTION</div>
-        <h2 class="title mt-3">Five-Star 회원가는<br>이렇게 다릅니다</h2>
+    <div class="grid md:grid-cols-[.9fr_1.1fr] gap-8 items-center">
+      <div class="reveal">
+        <div class="eyebrow text-emerald-700">GREEN VALLEY FIVE-STAR</div>
+        <h2 class="title mt-3">한 골프장만 쓰는 회원권이 아닙니다.</h2>
         <p class="desc mt-4">
-          그린밸리 한 곳만 쓰는 회원권이 아닙니다.
-          그린밸리 정회원 자격을 기반으로 5개 파트너 구장을 회원가로 이용하면서
-          장박·시내골프·부부·법인 이용까지 폭넓게 활용할 수 있습니다.
+          Five-Star의 핵심은 단순히 “그린밸리를 싸게 이용한다”가 아닙니다.
+          <b class="text-gray-900">그린밸리 정회원권을 기반으로 파트너 관계의 5개 골프장을 회원가로 이용하는 구조</b>입니다.
+        </p>
+        <p class="desc mt-3">
+          오늘은 그린밸리, 다음 라운드는 레이크우드, 장박 일정은 카오차녹처럼
+          여행 목적에 따라 골프장을 바꿔가며 활용할 수 있습니다.
         </p>
       </div>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div class="card p-6"><div class="text-2xl">🏌️</div><div class="font-black mt-3">5개 구장 회원가</div><p class="desc mt-2">그린밸리·레이크우드·실버레이크·수파프룩·카오차녹</p></div>
-        <div class="card p-6"><div class="text-2xl">🏨</div><div class="font-black mt-3">숙박·식사 연계</div><p class="desc mt-2">장박 시 전체 체류비를 빠르게 계산하기 쉬운 구조</p></div>
-        <div class="card p-6"><div class="text-2xl">📄</div><div class="font-black mt-3">정회원권·증서</div><p class="desc mt-2">그린밸리 정회원 자격 및 공식 증빙</p></div>
-        <div class="card p-6"><div class="text-2xl">🤝</div><div class="font-black mt-3">현지 운영</div><p class="desc mt-2">각 구장 현지 소장이 있어 예약·이용 시 현지 대응</p></div>
+
+      <div class="grid sm:grid-cols-2 gap-4 reveal">
+        <div class="card p-6"><div class="text-2xl">01</div><div class="font-black mt-3">5개 골프장</div><p class="desc mt-2">한 곳이 아닌 총 99홀 선택</p></div>
+        <div class="card p-6"><div class="text-2xl">02</div><div class="font-black mt-3">회원가 이용</div><p class="desc mt-2">방콕권 주요 구장을 회원조건으로</p></div>
+        <div class="card p-6"><div class="text-2xl">03</div><div class="font-black mt-3">정회원 증빙</div><p class="desc mt-2">그린밸리 회원권·회원카드·증서 발급</p></div>
+        <div class="card p-6"><div class="text-2xl">04</div><div class="font-black mt-3">현지 운영</div><p class="desc mt-2">예약과 실제 이용까지 현지에서 관리</p></div>
       </div>
     </div>
   </div>
@@ -213,20 +261,24 @@
 <!-- LOCAL COMPARISON -->
 <section class="section bg-white" id="comparison">
   <div class="container">
-    <div class="text-center max-w-3xl mx-auto">
-      <div class="eyebrow text-amber-700">LOCAL VS FIVE-STAR</div>
-      <h2 class="title mt-3">그린밸리 하나만 이용하는 현지 회원권도<br>연 약 340만원 수준</h2>
-      <p class="desc mt-4">10년 단순 계산 약 3,400만원. 반복해서 태국 골프를 가는 분이라면 단일 구장보다 5개 구장을 함께 활용하는 구조가 훨씬 중요합니다.</p>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="eyebrow text-amber-700">WHY FIVE-STAR?</div>
+      <h2 class="title mt-3">그린밸리 하나만 이용하는 현지회원권도<br>1년에 약 340만원 수준.</h2>
+      <p class="desc mt-4">
+        현재 상담 기준 태국 현지 그린밸리 단일회원권은 1년 약 340만원 수준입니다.
+        단순히 10년을 이용한다고 계산하면 약 3,400만원.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-5 mt-10">
+    <div class="grid md:grid-cols-2 gap-5 mt-10 reveal">
       <div class="card p-7">
-        <div class="text-xs font-black text-gray-400">태국 현지 그린밸리 단일회원권</div>
+        <div class="text-xs font-black text-gray-400">현지 단일회원권</div>
         <div class="text-4xl font-black mt-3">약 340만원 <span class="text-base text-gray-400">/ 1년</span></div>
         <div class="mt-2 text-lg font-black text-gray-500">10년 단순 계산 약 3,400만원</div>
         <div class="mt-6 border-t pt-5 text-sm text-gray-600 font-semibold leading-7">
           • 그린밸리 1개 구장 중심<br>
-          • 매년 현지 회원권 갱신 구조
+          • 매년 회원권 비용 발생<br>
+          • 구장 선택 폭 제한
         </div>
       </div>
 
@@ -235,73 +287,58 @@
         <div class="text-4xl font-black mt-3">5개 구장 <span class="text-base text-white/60">회원가</span></div>
         <div class="mt-2 text-lg font-black text-[#F3D995]">총 99홀 · 정회원 증서</div>
         <div class="mt-6 border-t border-white/15 pt-5 text-sm text-white/80 font-semibold leading-7">
-          • 그린밸리 정회원권 및 증서<br>
-          • 5개 파트너 구장 회원가 이용<br>
-          • 현지 구장별 소장 운영
+          • 그린밸리 정회원권<br>
+          • 파트너 구장 회원가<br>
+          • 장박·시내골프 모두 활용<br>
+          • SILVER / GOLD / DIAMOND 선택
         </div>
       </div>
     </div>
 
-    <p class="text-[11px] text-gray-400 mt-5 text-center">
-      ※ 현지 단일회원권 340만원은 현재 상담 기준 참고값입니다. 실제 현지 조건은 시점에 따라 달라질 수 있습니다.
-    </p>
+    <div class="mt-7 text-center font-black text-green reveal">
+      회원권 가격만 보지 말고, 앞으로 몇 년 동안 몇 개의 골프장을 어떻게 이용할지를 비교하세요.
+    </div>
   </div>
 </section>
 
-
-<!-- COST CALCULATOR -->
+<!-- CALCULATOR -->
 <section class="section bg-[#071E17] text-white relative overflow-hidden" id="calculator">
   <div class="absolute -top-24 -right-16 w-[420px] h-[420px] rounded-full bg-[#D8B56A]/10 blur-3xl pointer-events-none"></div>
   <div class="absolute -bottom-24 -left-20 w-[420px] h-[420px] rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"></div>
 
   <div class="container max-w-6xl relative z-10">
     <div class="text-center max-w-3xl mx-auto reveal">
-      <div class="eyebrow text-[#F2D795]">HOW MANY TRIPS TO BREAK EVEN?</div>
-      <h2 class="title mt-3">몇 번 가면 회원권 값이 빠질까요?</h2>
+      <div class="eyebrow text-[#F2D795]">몇 번 가면 본전일까요?</div>
+      <h2 class="title mt-3">복잡한 계산은 필요 없습니다.<br>몇 번만 눌러보세요.</h2>
       <p class="text-sm text-white/65 mt-4 leading-7 font-semibold">
-        복잡하게 계산하지 마세요. 일정과 회원권만 선택하면
-        <b class="text-white">4인 1팀 기준 1회 절감액 · 5회 · 10회 누적 절감액 · 손익분기 횟수</b>를 바로 보여드립니다.
+        태국 골프를 자주 가신다면 회원권 가격보다 먼저 확인해야 할 숫자는 하나입니다.
+        <b class="text-white">“4명이 한 번 갈 때 얼마가 절감되는가?”</b>
       </p>
     </div>
 
-    <div class="mt-10 grid lg:grid-cols-[.9fr_1.1fr] gap-6 items-start">
-      <!-- SIMPLE INPUT -->
-      <div class="rounded-3xl bg-white text-gray-900 p-6 md:p-8 shadow-2xl reveal">
+    <div class="calc-layout mt-10 grid lg:grid-cols-[.9fr_1.1fr] gap-6 items-start">
+      <div class="calc-input-card rounded-3xl bg-white text-gray-900 p-6 md:p-8 shadow-2xl reveal">
         <div class="text-xs font-black text-emerald-700">STEP 1</div>
         <h3 class="text-xl font-black mt-1">여행 일정 선택</h3>
 
-        <div class="grid grid-cols-3 gap-2 mt-5">
-          <button type="button"
-            class="duration-btn border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black transition hover:border-emerald-300"
-            data-nights="3" data-days="5" data-rounds="3" data-package="1580000">
-            <span class="block text-lg">3박5일</span>
-            <span class="block text-[10px] text-gray-400 mt-1">54홀</span>
+        <div class="duration-wrap grid grid-cols-3 gap-2 mt-5">
+          <button type="button" class="duration-btn tap-card border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black" data-nights="3" data-days="5" data-rounds="3" data-package="1580000">
+            <span class="block text-lg">3박5일</span><span class="block text-[10px] text-gray-400 mt-1">54홀</span>
           </button>
-
-          <button type="button"
-            class="duration-btn border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-2xl py-4 font-black transition"
-            data-nights="4" data-days="6" data-rounds="4" data-package="1750000">
-            <span class="block text-lg">4박6일</span>
-            <span class="block text-[10px] opacity-60 mt-1">72홀 · 추천</span>
+          <button type="button" class="duration-btn tap-card border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-2xl py-4 font-black" data-nights="4" data-days="6" data-rounds="4" data-package="1750000">
+            <span class="block text-lg">4박6일</span><span class="block text-[10px] opacity-60 mt-1">72홀 · 추천</span>
           </button>
-
-          <button type="button"
-            class="duration-btn border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black transition hover:border-emerald-300"
-            data-nights="5" data-days="7" data-rounds="5" data-package="1970000">
-            <span class="block text-lg">5박7일</span>
-            <span class="block text-[10px] text-gray-400 mt-1">90홀</span>
+          <button type="button" class="duration-btn tap-card border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black" data-nights="5" data-days="7" data-rounds="5" data-package="1970000">
+            <span class="block text-lg">5박7일</span><span class="block text-[10px] text-gray-400 mt-1">90홀</span>
           </button>
         </div>
 
         <div class="mt-7 rounded-2xl bg-[#F7F9F8] border border-gray-100 p-5">
           <div class="text-[11px] text-gray-400 font-black">여행사 패키지 1인 기준</div>
           <div id="packagePresetLabel" class="text-2xl font-black mt-1">4박6일 약 175만원</div>
-          <p class="text-[11px] text-gray-400 mt-2">
-            실제 받은 견적이 다르면 아래 금액만 바꿔주세요.
-          </p>
+          <p class="text-[11px] text-gray-400 mt-2">실제 받은 여행사 견적이 있다면 아래 금액만 바꿔주세요.</p>
           <div class="flex items-center gap-2 mt-3">
-            <input id="calcPackagePrice" type="number" min="0" step="10000" value="1750000"
-              class="w-full p-4 rounded-xl bg-white border border-gray-100 font-black text-lg" />
+            <input id="calcPackagePrice" type="number" min="0" step="10000" value="1750000" class="w-full p-4 rounded-xl bg-white border border-gray-100 font-black text-lg" />
             <span class="font-black text-gray-500">원</span>
           </div>
         </div>
@@ -309,20 +346,14 @@
         <div class="mt-7">
           <div class="text-xs font-black text-emerald-700">STEP 2</div>
           <h3 class="text-xl font-black mt-1">회원권 선택</h3>
-
-          <div class="grid grid-cols-2 gap-2 mt-4">
-            <button type="button"
-              class="membership-btn border-2 border-[#D8B56A] bg-[#FFF8E8] rounded-2xl p-4 text-left transition"
-              data-plan="GOLD" data-price="19800000">
+          <div class="membership-choice grid grid-cols-2 gap-2 mt-4">
+            <button type="button" class="membership-btn tap-card border-2 border-[#D8B56A] bg-[#FFF8E8] rounded-2xl p-4 text-left" data-plan="GOLD" data-price="19800000">
               <span class="block text-xs font-black text-amber-700">4인 추천</span>
               <span class="block text-lg font-black mt-1">GOLD</span>
               <span class="block text-[11px] text-gray-500 mt-1">기명1 + 무기명3</span>
               <span class="block text-base font-black text-green mt-3">1,980만원</span>
             </button>
-
-            <button type="button"
-              class="membership-btn border-2 border-gray-200 bg-white rounded-2xl p-4 text-left transition hover:border-emerald-300"
-              data-plan="DIAMOND" data-price="27500000">
+            <button type="button" class="membership-btn tap-card border-2 border-gray-200 bg-white rounded-2xl p-4 text-left" data-plan="DIAMOND" data-price="27500000">
               <span class="block text-xs font-black text-emerald-700">무기명 4인</span>
               <span class="block text-lg font-black mt-1">DIAMOND</span>
               <span class="block text-[11px] text-gray-500 mt-1">법인·지인 활용</span>
@@ -334,11 +365,10 @@
         <div class="mt-7">
           <div class="text-xs font-black text-emerald-700">STEP 3</div>
           <h3 class="text-xl font-black mt-1">회원 이용 시 항공권</h3>
-
-          <div class="grid grid-cols-3 gap-2 mt-4">
-            <button type="button" class="air-btn border-2 border-gray-200 rounded-xl py-3 font-black text-sm" data-air="300000">30만원</button>
-            <button type="button" class="air-btn border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-xl py-3 font-black text-sm" data-air="400000">40만원</button>
-            <button type="button" class="air-btn border-2 border-gray-200 rounded-xl py-3 font-black text-sm" data-air="500000">50만원</button>
+          <div class="air-choice grid grid-cols-3 gap-2 mt-4">
+            <button type="button" class="air-btn tap-card border-2 border-gray-200 rounded-xl py-3 font-black text-sm" data-air="300000">30만원</button>
+            <button type="button" class="air-btn tap-card border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-xl py-3 font-black text-sm" data-air="400000">40만원</button>
+            <button type="button" class="air-btn tap-card border-2 border-gray-200 rounded-xl py-3 font-black text-sm" data-air="500000">50만원</button>
           </div>
           <input id="calcAirfare" type="number" value="400000" class="hidden" />
         </div>
@@ -348,38 +378,27 @@
             <span>주말 라운드 / 현지 별도비용 반영 <span class="text-xs text-gray-400 font-bold">(선택)</span></span>
             <span class="text-gray-400">＋</span>
           </summary>
-
           <div class="mt-5 space-y-4">
             <div>
               <label class="text-xs font-black text-gray-500">주말 라운드 수</label>
               <select id="calcWeekendRounds" class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold">
-                <option value="0">전부 주중</option>
-                <option value="1">주말 1회 포함</option>
-                <option value="2">주말 2회 포함</option>
+                <option value="0">전부 주중</option><option value="1">주말 1회 포함</option><option value="2">주말 2회 포함</option>
               </select>
             </div>
-
             <div>
               <label class="text-xs font-black text-gray-500">4인 팀 현지 별도비용</label>
-              <input id="calcTeamExtras" type="number" min="0" step="10000" value="0"
-                class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold"
-                placeholder="카트·캐디·팁·송영 등 실제 예상액" />
-              <p class="text-[11px] text-gray-400 mt-2">
-                정확한 비교가 필요할 때만 입력하세요. 기본 계산에는 넣지 않습니다.
-              </p>
+              <input id="calcTeamExtras" type="number" min="0" step="10000" value="0" class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 font-bold" placeholder="카트·캐디·팁·송영 등 실제 예상액" />
             </div>
           </div>
         </details>
 
-        <button id="calcBtn" type="button"
-          class="mt-7 w-full bg-[#0B3D2E] text-white py-5 rounded-xl text-lg font-black hover:bg-[#125B44] hover:-translate-y-0.5 transition-all duration-300 shadow-lg">
+        <button id="calcBtn" type="button" class="mt-7 w-full bg-[#0B3D2E] text-white py-5 rounded-xl text-lg font-black shadow-lg">
           몇 번 가면 본전인지 확인
         </button>
       </div>
 
-      <!-- RESULT -->
-      <div class="space-y-4 reveal lg:sticky lg:top-24">
-        <div id="calcResultCard" class="gold-panel rounded-3xl p-7 md:p-8 text-gray-900 shadow-2xl transition-all duration-500">
+      <div class="calc-sticky space-y-4 reveal lg:sticky lg:top-24">
+        <div id="calcResultCard" class="calc-result-card gold-panel rounded-3xl p-7 md:p-8 text-gray-900 shadow-2xl transition-all duration-500">
           <div class="flex justify-between items-center gap-4">
             <div>
               <div class="text-xs font-black text-amber-800">4인 1팀 · <span id="resultDuration">4박6일</span></div>
@@ -394,7 +413,6 @@
               <div id="resultPackageTeam" class="text-2xl md:text-3xl font-black mt-2">-</div>
               <div id="resultPackagePerPerson" class="text-[11px] text-gray-400 mt-1">-</div>
             </div>
-
             <div class="rounded-2xl bg-white/70 p-5">
               <div class="text-[11px] text-gray-500 font-black">Five-Star 회원 · 4인</div>
               <div id="resultMemberTeam" class="text-2xl md:text-3xl font-black text-green mt-2">-</div>
@@ -404,28 +422,28 @@
 
           <div class="mt-7 pt-6 border-t border-amber-900/10 text-center">
             <div class="text-xs text-gray-500 font-black">4명이 한 번 다녀오면</div>
-            <div id="resultSavingTeam" class="text-[42px] md:text-[54px] leading-tight font-black text-amber-800 mt-2">-</div>
+            <div id="resultSavingTeam" class="big-saving text-[42px] md:text-[54px] leading-tight font-black text-amber-800 mt-2">-</div>
             <div id="resultSavingPercent" class="inline-block mt-3 bg-[#0B3D2E] text-white px-4 py-2 rounded-full text-xs font-black">-</div>
           </div>
         </div>
 
-        <div class="rounded-3xl bg-white/8 border border-white/10 p-7 backdrop-blur-sm">
+        <div class="glass rounded-3xl p-7">
           <div class="text-xs font-black text-[#F2D795]">가장 중요한 숫자</div>
           <div class="mt-4 text-center">
             <div class="text-sm text-white/55 font-bold">이 회원권은 몇 번 가면 본전?</div>
-            <div id="resultBreakEvenTrips" class="text-[52px] leading-none font-black text-[#F2D795] mt-3">-</div>
+            <div id="resultBreakEvenTrips" class="break-even text-[52px] leading-none font-black text-[#F2D795] mt-3">-</div>
             <div id="resultBreakEvenSub" class="text-sm text-white/55 font-bold mt-3">-</div>
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
-          <div class="rounded-3xl bg-white/8 border border-white/10 p-6 text-center">
-            <div class="text-xs text-white/45 font-bold">5회 이용하면</div>
+          <div class="glass rounded-3xl p-6 text-center">
+            <div class="text-xs text-white/45 font-bold">5번 이용하면</div>
             <div id="resultSaving5" class="text-2xl font-black text-[#F2D795] mt-2">-</div>
             <div id="resultSaving5Net" class="text-[11px] text-white/40 mt-2">-</div>
           </div>
-          <div class="rounded-3xl bg-white/8 border border-white/10 p-6 text-center">
-            <div class="text-xs text-white/45 font-bold">10회 이용하면</div>
+          <div class="glass rounded-3xl p-6 text-center">
+            <div class="text-xs text-white/45 font-bold">10번 이용하면</div>
             <div id="resultSaving10" class="text-2xl font-black text-[#F2D795] mt-2">-</div>
             <div id="resultSaving10Net" class="text-[11px] text-white/40 mt-2">-</div>
           </div>
@@ -436,89 +454,146 @@
           <div id="resultLongSaving" class="text-3xl font-black mt-2">-</div>
         </div>
 
-        <a href="#inquiry"
-          class="block rounded-2xl bg-[#F2D795] text-[#193428] p-5 text-center font-black hover:-translate-y-0.5 transition">
+        <a href="#inquiry" class="block rounded-2xl bg-[#F2D795] text-[#193428] p-5 text-center font-black">
           이 계산 결과로 상담받기 →
         </a>
 
         <p class="text-[11px] text-white/40 leading-5 px-1">
-          ※ 기본 비교는 여행사 패키지 총액과 회원 기본 이용가 + 선택한 항공료를 비교합니다.
-          카트·캐디·팁·송영 등 양쪽 모두 별도인 항목은 기본 비교에서 제외했습니다.
+          ※ 여행사 상품과 회원 이용의 공통 별도비용은 기본 비교에서 제외했습니다. 실제 견적이 있다면 금액을 직접 바꿔 비교하세요.
         </p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- EXAMPLE -->
+<section class="section bg-white" id="example">
+  <div class="container max-w-5xl">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="eyebrow text-emerald-700">EXAMPLE</div>
+      <h2 class="title mt-3">4명이 겨울마다 방콕 골프를 간다면?</h2>
+      <p class="desc mt-4">아래는 이해를 위한 단순 예시입니다.</p>
+    </div>
+
+    <div class="mt-10 card p-7 md:p-9 shadow-soft reveal">
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl bg-gray-50 p-5"><div class="text-xs text-gray-400 font-black">조건</div><div class="font-black mt-2">4박6일 · 72홀 · 4인 1팀</div></div>
+        <div class="rounded-2xl bg-gray-50 p-5"><div class="text-xs text-gray-400 font-black">여행사</div><div class="font-black mt-2">1인 약 175만원</div></div>
+        <div class="rounded-2xl bg-gray-50 p-5"><div class="text-xs text-gray-400 font-black">회원 항공</div><div class="font-black mt-2">1인 약 40만원 가정</div></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-6">
+        <div class="bad rounded-3xl p-7">
+          <div class="text-sm font-black text-red-600">여행사 이용</div>
+          <div class="text-4xl font-black mt-3">약 700만원</div>
+          <div class="desc mt-2">175만원 × 4인</div>
+        </div>
+        <div class="good rounded-3xl p-7">
+          <div class="text-sm font-black text-green">Five-Star 회원 이용</div>
+          <div class="text-4xl font-black text-green mt-3">약 302만원</div>
+          <div class="desc mt-2">주중 89,000원 × 4회 + 항공 40만원 기준</div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <div class="text-sm text-gray-500 font-black">4인 1팀 한 번 갈 때</div>
+        <div class="text-[48px] leading-tight font-black text-amber-700 mt-2">약 398만원 차이</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 mt-8 text-center">
+        <div class="rounded-2xl bg-[#FBF8F0] p-5"><div class="text-xs text-gray-500 font-bold">5번 이용</div><div class="text-xl font-black text-green mt-2">약 1,990만원</div></div>
+        <div class="rounded-2xl bg-[#FBF8F0] p-5"><div class="text-xs text-gray-500 font-bold">7번 이용</div><div class="text-xl font-black text-green mt-2">약 2,786만원</div></div>
+        <div class="rounded-2xl bg-[#FBF8F0] p-5"><div class="text-xs text-gray-500 font-bold">10번 이용</div><div class="text-xl font-black text-green mt-2">약 3,980만원</div></div>
+      </div>
+
+      <div class="mt-7 text-center font-black text-green">
+        그래서 “회원권이 얼마인가?”보다 “나는 몇 번 이용할 것인가?”가 더 중요합니다.
+      </div>
+
+      <p class="text-[11px] text-gray-400 mt-5 text-center">※ 실제 별도비용·항공료·주말라운드 여부에 따라 결과는 달라질 수 있습니다.</p>
+    </div>
+  </div>
+</section>
 
 <!-- COURSES -->
 <section class="section bg-[#F7F8F5]" id="courses">
   <div class="container">
-    <div class="text-center max-w-3xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto reveal">
       <div class="eyebrow text-emerald-700">5 COURSES · 99 HOLES</div>
-      <h2 class="title mt-3">5개 골프장, 실제 이용하는 5개 골프장</h2>
-      <p class="desc mt-4">그린밸리를 중심으로 방콕권 5개 구장을 회원가로 이용할 수 있습니다.</p>
+      <h2 class="title mt-3">한 번의 입회로, 라운드는 다양하게.</h2>
+      <p class="desc mt-4">장박골프에서 중요한 건 매일 다른 코스를 선택할 수 있는가입니다.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-      <article class="card overflow-hidden"><img src="./images/green-valley.jpg" alt="그린밸리 컨트리클럽"
-         class="w-full aspect-[16/10] object-cover" /><div class="p-6"><h3 class="font-black text-lg">그린밸리CC</h3><p class="desc mt-2">Five-Star의 기준이 되는 정회원 골프장.</p></div></article>
-      <article class="card overflow-hidden"><img src="./images/lakewood.jpg" alt="레이크우드 컨트리클럽"
-         class="w-full aspect-[16/10] object-cover" /><div class="p-6"><h3 class="font-black text-lg">레이크우드CC</h3><p class="desc mt-2">방콕권에서 함께 활용하는 27홀 파트너 구장.</p></div></article>
-      <article class="card overflow-hidden"><img src="./images/silverlake.jpg" alt="실버레이크 골프코스"
-         class="w-full aspect-[16/10] object-cover" /><div class="p-6"><h3 class="font-black text-lg">실버레이크</h3><p class="desc mt-2">수변 코스와 차별화된 풍경을 즐기는 18홀.</p></div></article>
-      <article class="card overflow-hidden"><div class="img-slot">
-         수파프룩CC 사진 추가 예정<br>
-         <span class="text-[11px] font-medium mt-1 block">./images/supaphruek.jpg</span>
-       </div><div class="p-6"><h3 class="font-black text-lg">수파프룩CC</h3><p class="desc mt-2">방콕권 시내골프 일정에 활용하는 18홀.</p></div></article>
-      <article class="card overflow-hidden md:col-span-2 lg:col-span-1"><img src="./images/khao-cha-ngok.jpg" alt="카오차녹 골프코스"
-         class="w-full aspect-[16/10] object-cover" /><div class="p-6"><h3 class="font-black text-lg">카오차녹</h3><p class="desc mt-2">장박골프에서 많이 활용. 방콕 시내 약 1시간.</p></div></article>
+    <div class="course-grid grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <article class="card overflow-hidden reveal">
+        <img src="./images/green-valley.jpg" alt="그린밸리 컨트리클럽" class="w-full aspect-[16/10] object-cover" />
+        <div class="p-6"><h3 class="font-black text-lg">그린밸리CC</h3><p class="desc mt-2">Five-Star의 기준이 되는 정회원 골프장. 방콕권 골프의 중심으로 활용합니다.</p></div>
+      </article>
+      <article class="card overflow-hidden reveal">
+        <img src="./images/lakewood.jpg" alt="레이크우드 컨트리클럽" class="w-full aspect-[16/10] object-cover" />
+        <div class="p-6"><h3 class="font-black text-lg">레이크우드CC</h3><p class="desc mt-2">27홀 규모. 코스를 바꿔가며 라운드하기 좋은 방콕권 골프장.</p></div>
+      </article>
+      <article class="card overflow-hidden reveal">
+        <img src="./images/silverlake.jpg" alt="실버레이크 골프코스" class="w-full aspect-[16/10] object-cover" />
+        <div class="p-6"><h3 class="font-black text-lg">실버레이크</h3><p class="desc mt-2">넓은 수변 경관과 차별화된 코스 분위기.</p></div>
+      </article>
+      <article class="card overflow-hidden reveal">
+        <div class="aspect-[16/10] bg-white flex items-center justify-center border-b border-gray-100 text-gray-400 text-sm font-black">수파프룩CC 사진 준비중</div>
+        <div class="p-6"><h3 class="font-black text-lg">수파프룩CC</h3><p class="desc mt-2">방콕권 시내골프 일정과 함께 활용하기 좋은 골프장.</p></div>
+      </article>
+      <article class="card overflow-hidden reveal md:col-span-2 lg:col-span-1">
+        <img src="./images/khao-cha-ngok.jpg" alt="카오차녹 골프코스" class="w-full aspect-[16/10] object-cover" />
+        <div class="p-6"><h3 class="font-black text-lg">카오차녹</h3><p class="desc mt-2">장박골프 이용 시 많이 선택. 방콕 시내에서 약 1시간 거리.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- STAY -->
+<!-- STAY TYPE -->
 <section class="section bg-white" id="stay">
   <div class="container">
-    <div class="text-center">
-      <div class="eyebrow text-emerald-700">HOW TO USE</div>
-      <h2 class="title mt-3">장박골프 vs 방콕 시내골프</h2>
+    <div class="text-center reveal">
+      <div class="eyebrow text-emerald-700">HOW DO YOU GOLF?</div>
+      <h2 class="title mt-3">장박이 목적이신가요?<br>방콕 시내골프가 목적이신가요?</h2>
     </div>
 
     <div class="grid md:grid-cols-2 gap-5 mt-10">
-      <div class="rounded-3xl bg-green text-white p-7 shadow-soft">
-        <div class="text-[#F2D795] text-sm font-black">장박골프</div>
-        <h3 class="subtitle mt-2">카오차녹 중심</h3>
+      <div class="rounded-3xl bg-green text-white p-7 shadow-soft reveal">
+        <div class="text-[#F2D795] text-sm font-black">한곳에서 오래 머문다면</div>
+        <h3 class="subtitle mt-2">카오차녹 장박형</h3>
         <ul class="mt-5 space-y-3 text-sm text-white/82 font-semibold">
-          <li>✓ 시내에서 약 1시간 이동</li>
-          <li>✓ 장기 체류 일정에 많이 활용</li>
-          <li>✓ 1박 + 카트 + 캐디 + 팁까지 약 11.5만원 수준</li>
+          <li>✓ 방콕 시내에서 약 1시간</li>
+          <li>✓ 장기체류 골퍼가 많이 활용</li>
+          <li>✓ 숙박과 라운드를 단순하게 운영</li>
+          <li>✓ 카트·캐디·팁 포함 시 1박 약 11.5만원 수준</li>
         </ul>
+        <p class="mt-5 text-sm text-[#F2D795] font-black">겨울 한 달 살기처럼 오래 머문다면 이쪽이 편합니다.</p>
       </div>
 
-      <div class="card p-7">
-        <div class="text-amber-700 text-sm font-black">시내골프</div>
-        <h3 class="subtitle mt-2">방콕권 구장 순환</h3>
+      <div class="card p-7 reveal">
+        <div class="text-amber-700 text-sm font-black">골프도 치고 방콕도 즐긴다면</div>
+        <h3 class="subtitle mt-2">방콕 시내형</h3>
         <ul class="mt-5 space-y-3 text-sm text-gray-700 font-semibold">
-          <li>✓ 다양한 구장을 바꿔가며 라운드</li>
-          <li>✓ 시내 호텔·식사·자유일정과 결합</li>
-          <li>✓ 약 10일 체류형 일정에 활용</li>
+          <li>✓ 그린밸리·레이크우드 등 순환</li>
+          <li>✓ 호텔과 골프 일정 자유롭게 구성</li>
+          <li>✓ 식사·쇼핑·방콕 일정 병행</li>
+          <li>✓ 7~10일 정도 체류하는 골퍼에게 활용도 높음</li>
         </ul>
+        <p class="mt-5 text-sm text-green font-black">골프만 하지 않고 방콕 생활까지 즐기고 싶다면 이쪽입니다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MEMBER RATE -->
+<!-- RATES -->
 <section class="section bg-[#FBFAF5]" id="rates">
   <div class="container max-w-4xl">
-    <div class="text-center">
+    <div class="text-center reveal">
       <div class="eyebrow text-amber-700">MEMBER RATE</div>
-      <h2 class="title mt-3">회원가, 무엇이 포함되는지까지 확인하세요</h2>
-      <p class="desc mt-4">회원가만 보는 게 아니라 실제 현지에서 어떤 비용이 포함되고, 무엇이 별도인지까지 확인해야 합니다.</p>
+      <h2 class="title mt-3">회원가는 싸게만 보이면 안 됩니다.<br>무엇이 포함되는지가 더 중요합니다.</h2>
     </div>
 
-    <div class="mt-10 card shadow-soft overflow-hidden">
+    <div class="mt-10 card shadow-soft overflow-hidden reveal">
       <div class="grid grid-cols-3 bg-green text-white text-center font-black text-sm">
         <div class="p-4">구장</div><div class="p-4">주중</div><div class="p-4">주말</div>
       </div>
@@ -528,132 +603,114 @@
         <div class="p-5 text-green text-xl">118,000원</div>
       </div>
       <div class="grid grid-cols-3 text-center text-sm font-bold">
-        <div class="p-5">카오차녹</div>
-        <div class="p-5 text-green text-xl">80,000원</div>
-        <div class="p-5 text-green text-xl">80,000원</div>
+        <div class="p-5">카오차녹</div><div class="p-5 text-green text-xl">80,000원</div><div class="p-5 text-green text-xl">80,000원</div>
       </div>
     </div>
 
-    <div class="grid sm:grid-cols-2 gap-4 mt-5">
-      <div class="good rounded-2xl p-5"><div class="font-black text-green">포함</div><div class="desc mt-2 !text-gray-700">그린피 + 조·중·석식 + 숙박</div></div>
-      <div class="bad rounded-2xl p-5"><div class="font-black text-red-600">별도</div><div class="desc mt-2 !text-gray-700">카트비 · 캐디피 · 캐디팁 · 기타 선택비용</div></div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-5 reveal">
+      <div class="good rounded-2xl p-5"><div class="font-black text-green">포함</div><div class="desc mt-2 !text-gray-700">그린피 · 숙박 · 식사</div></div>
+      <div class="bad rounded-2xl p-5"><div class="font-black text-red-600">별도</div><div class="desc mt-2 !text-gray-700">카트비 · 캐디피 · 캐디팁 · 송영 및 선택비용</div></div>
+    </div>
+
+    <div class="mt-6 text-center font-black text-green reveal">
+      “그린피 89,000원”이 아니라 골프와 하루 체류를 묶은 회원 이용요금입니다.
     </div>
   </div>
 </section>
-
 
 <!-- HOTELS -->
-<section class="section bg-[#F7F8F5]" id="hotels">
+<section class="section bg-white" id="hotels">
   <div class="container">
-    <div class="text-center max-w-3xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto reveal">
       <div class="eyebrow text-emerald-700">STAY IN BANGKOK</div>
-      <h2 class="title mt-3">골프만큼 중요한 숙박도 함께 보세요</h2>
-      <p class="desc mt-4">
-        1주, 2주 이상 머무르는 장박골프라면 숙소 컨디션과 이동 동선이 만족도를 크게 좌우합니다.
-        실제 이용 가능한 숙소를 함께 비교해드립니다.
-      </p>
+      <h2 class="title mt-3">장박골프는 골프장만 좋아서는 안 됩니다.</h2>
+      <p class="desc mt-4">일주일 이상 머무르면 숙소가 골프장만큼 중요합니다. 어디서 치는지만큼 어디서 쉬는지도 같이 설계합니다.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-5 mt-10">
-      <article class="card overflow-hidden">
-        <img src="./images/hotel-amaranth.jpg"
-             alt="아마란스 수완나품 호텔"
-             class="w-full aspect-[16/10] object-cover" />
-        <div class="p-6">
-          <h3 class="font-black text-lg">아마란스 수완나품 호텔</h3>
-          <p class="desc mt-2">공항 접근성이 좋은 방콕권 숙소. 이용 시 식사 제공조건은 예약 전 다시 확인합니다.</p>
-        </div>
+    <div class="hotel-grid grid md:grid-cols-3 gap-5 mt-10">
+      <article class="card overflow-hidden reveal">
+        <img src="./images/hotel-amaranth.jpg" alt="아마란스 수완나품 호텔" class="w-full aspect-[16/10] object-cover" />
+        <div class="p-6"><h3 class="font-black text-lg">아마란스 수완나품 호텔</h3><p class="desc mt-2">공항과 방콕권 이동을 함께 고려할 수 있는 숙소.</p></div>
       </article>
-
-      <article class="card overflow-hidden">
-        <img src="./images/hotel-tisha.jpg"
-             alt="티샤 호텔 외관"
-             class="w-full aspect-[16/10] object-cover" />
-        <div class="p-6">
-          <h3 class="font-black text-lg">티샤 호텔</h3>
-          <p class="desc mt-2">장박과 시내골프 일정에 맞춰 활용할 수 있는 제휴 숙소.</p>
-        </div>
+      <article class="card overflow-hidden reveal">
+        <img src="./images/hotel-tisha.jpg" alt="티샤 호텔" class="w-full aspect-[16/10] object-cover" />
+        <div class="p-6"><h3 class="font-black text-lg">티샤 호텔</h3><p class="desc mt-2">장박·시내골프 일정과 연계해 활용할 수 있는 숙소.</p></div>
       </article>
-
-      <article class="card overflow-hidden">
-        <img src="./images/hotel-tisha1.jpg"
-             alt="티샤 호텔 수영장"
-             class="w-full aspect-[16/10] object-cover" />
-        <div class="p-6">
-          <h3 class="font-black text-lg">휴식까지 고려한 체류</h3>
-          <p class="desc mt-2">라운드 후 쉬는 시간까지 고려해 숙소와 골프장을 함께 설계합니다.</p>
-        </div>
+      <article class="card overflow-hidden reveal">
+        <img src="./images/hotel-tisha1.jpg" alt="티샤 호텔 수영장" class="w-full aspect-[16/10] object-cover" />
+        <div class="p-6"><h3 class="font-black text-lg">휴식까지 고려한 체류</h3><p class="desc mt-2">라운드 후 쉬는 시간까지 고려해 숙소와 골프장을 함께 설계합니다.</p></div>
       </article>
     </div>
   </div>
 </section>
 
-
-<!-- MEMBERSHIP / PRICES -->
-<section class="section bg-white" id="membership">
+<!-- MEMBERSHIP -->
+<section class="section bg-[#FBFAF5]" id="membership">
   <div class="container">
-    <div class="text-center max-w-3xl mx-auto">
-      <div class="eyebrow text-emerald-700">MEMBERSHIP</div>
-      <h2 class="title mt-3">누가 쓰느냐에 따라 고르세요</h2>
-      <p class="desc mt-4">가격보다 이용 인원과 실제 활용도를 먼저 봅니다.</p>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="eyebrow text-emerald-700">CHOOSE YOUR MEMBERSHIP</div>
+      <h2 class="title mt-3">무조건 비싼 회원권이 좋은 게 아닙니다.</h2>
+      <p class="desc mt-4">부부인지, 4인인지, 법인인지에 따라 가장 효율적인 구좌가 달라집니다.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-5 mt-10">
-      <div class="price-card card p-7">
+    <div class="membership-grid grid md:grid-cols-3 gap-5 mt-10">
+      <div class="card p-7 reveal">
         <div class="text-sm font-black text-gray-400">SILVER</div>
         <h3 class="subtitle mt-2">기명 1 + 무기명 1</h3>
         <div class="text-3xl font-black text-green mt-5">1,250만원 <span class="text-sm text-gray-400">+ VAT</span></div>
         <p class="desc mt-3">부부·커플·2인 중심 이용</p>
-        <a href="#inquiry" data-product="SILVER" class="product-cta block mt-6 bg-gray-100 text-center py-3.5 rounded-xl font-black">실버 상담</a>
+        <a href="#inquiry" data-product="SILVER" class="product-cta tap-card block mt-6 bg-gray-100 text-center py-3.5 rounded-xl font-black">SILVER 상담</a>
       </div>
 
-      <div class="price-card card p-7 border-2 border-[#D8B56A]">
-        <span class="pill bg-[#F6E8C3] text-[#684E13]">4인 추천</span>
+      <div class="card p-7 border-2 border-[#D8B56A] reveal">
+        <span class="pill bg-[#F6E8C3] text-[#684E13]">가족·지인 추천</span>
         <div class="text-sm font-black text-amber-700 mt-4">GOLD</div>
         <h3 class="subtitle mt-2">기명 1 + 무기명 3</h3>
         <div class="text-3xl font-black text-green mt-5">1,800만원 <span class="text-sm text-gray-400">+ VAT</span></div>
         <p class="desc mt-3">가족·지인 4인 이용</p>
-        <a href="#inquiry" data-product="GOLD" class="product-cta block mt-6 bg-[#F3E2B3] text-center py-3.5 rounded-xl font-black">골드 상담</a>
+        <a href="#inquiry" data-product="GOLD" class="product-cta tap-card block mt-6 bg-[#F3E2B3] text-center py-3.5 rounded-xl font-black">GOLD 상담</a>
       </div>
 
-      <div class="price-card rounded-3xl p-7 bg-green text-white shadow-soft">
+      <div class="rounded-3xl p-7 bg-green text-white shadow-soft reveal">
         <span class="pill bg-white/10 text-[#F2D795] border border-white/10">법인·무기명 추천</span>
         <div class="text-sm font-black text-[#F2D795] mt-4">DIAMOND</div>
         <h3 class="subtitle mt-2">무기명 4인</h3>
-        <div class="text-3xl font-black text-white mt-5">2,500만원 <span class="text-sm text-white/50">+ VAT</span></div>
+        <div class="text-3xl font-black mt-5">2,500만원 <span class="text-sm text-white/50">+ VAT</span></div>
         <p class="text-sm text-white/65 mt-3">법인·임직원·거래처 활용</p>
-        <a href="#inquiry" data-product="DIAMOND" class="product-cta block mt-6 bg-[#F2D795] text-[#183126] text-center py-3.5 rounded-xl font-black">다이아몬드 상담</a>
+        <a href="#inquiry" data-product="DIAMOND" class="product-cta tap-card block mt-6 bg-[#F2D795] text-[#183126] text-center py-3.5 rounded-xl font-black">DIAMOND 상담</a>
       </div>
     </div>
-
-    <p class="text-[11px] text-gray-400 mt-5 text-center">※ 위 입회가는 현재 상담 기준이며 최종 계약 시 공식 입회신청서와 세금 조건을 다시 확인합니다.</p>
   </div>
 </section>
 
 <!-- TRUST -->
 <section class="section bg-green text-white" id="trust">
   <div class="container">
-    <div class="text-center max-w-3xl mx-auto">
-      <div class="eyebrow text-[#F2D795]">WHY TRUST</div>
-      <h2 class="title mt-3">20년 회원자격 · 정회원증서 · 현지 소장</h2>
-      <p class="text-white/65 mt-4 text-sm leading-7 font-semibold">회원권은 가격보다 실제 이용할 때 누가 끝까지 챙겨주는지가 더 중요합니다.</p>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="eyebrow text-[#F2D795]">MEMBERSHIP YOU CAN VERIFY</div>
+      <h2 class="title mt-3">돈을 내는 순간보다<br>실제 이용할 때가 더 중요합니다.</h2>
+      <p class="text-white/65 mt-4 text-sm leading-7 font-semibold">계약내용과 회원자격, 회원증서, 실제 예약방식까지 확인하고 입회하셔야 합니다.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-      <div class="bg-white/8 border border-white/10 rounded-2xl p-5 text-center"><div class="text-2xl">20</div><div class="font-black mt-2">20년 회원자격</div></div>
-      <div class="bg-white/8 border border-white/10 rounded-2xl p-5 text-center"><div class="text-2xl">📄</div><div class="font-black mt-2">정식 회원권 증서</div></div>
-      <div class="bg-white/8 border border-white/10 rounded-2xl p-5 text-center"><div class="text-2xl">💳</div><div class="font-black mt-2">회원카드 발급</div></div>
-      <div class="bg-white/8 border border-white/10 rounded-2xl p-5 text-center"><div class="text-2xl">🤝</div><div class="font-black mt-2">현지 소장 운영</div></div>
+    <div class="trust-grid grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 reveal">
+      <div class="glass rounded-2xl p-5 text-center"><div class="text-2xl font-black">20</div><div class="font-black mt-2">20년 회원자격</div></div>
+      <div class="glass rounded-2xl p-5 text-center"><div class="text-2xl">📄</div><div class="font-black mt-2">정회원 증서</div></div>
+      <div class="glass rounded-2xl p-5 text-center"><div class="text-2xl">💳</div><div class="font-black mt-2">회원카드 발급</div></div>
+      <div class="glass rounded-2xl p-5 text-center"><div class="text-2xl">🤝</div><div class="font-black mt-2">현지 운영 지원</div></div>
     </div>
 
-    <div class="mt-8 bg-white/8 border border-white/10 rounded-3xl p-6">
+    <div class="mt-8 glass rounded-3xl p-6 reveal">
       <div class="font-black text-[#F2D795]">공식 약관 기준</div>
       <ul class="mt-4 space-y-2 text-sm text-white/78 font-semibold leading-7">
-        <li>• 회원자격은 입회금 전액 납부일로부터 20년</li>
+        <li>• 회원자격은 입회금 전액 납부일부터 20년</li>
         <li>• 창립회원 연회비 면제 혜택</li>
         <li>• 명의변경은 입회 후 1년 경과 뒤 규정에 따라 가능</li>
-        <li>• 제휴 구장 및 회원요금은 운영정책에 따라 변경될 수 있음</li>
+        <li>• 제휴구장 혜택과 회원요금은 운영정책에 따라 변경될 수 있음</li>
       </ul>
+    </div>
+
+    <div class="mt-7 text-center font-black text-[#F2D795] reveal">
+      좋은 말보다 계약서와 약관으로 확인하세요. 저도 그 기준으로 설명드리겠습니다.
     </div>
   </div>
 </section>
@@ -661,31 +718,35 @@
 <!-- PROMOTION -->
 <section class="section bg-[#FFF8E9]" id="promotion">
   <div class="container max-w-4xl">
-    <div class="rounded-3xl border-2 border-[#DDBA68] bg-white p-8 md:p-11 text-center shadow-soft">
+    <div class="rounded-3xl border-2 border-[#DDBA68] bg-white p-8 md:p-11 text-center shadow-soft reveal">
       <div class="text-4xl">🎁</div>
-      <div class="eyebrow text-amber-700 mt-3">KIM DAEWOO SPECIAL</div>
-      <h2 class="title mt-3">선착순 3인<br><span class="text-amber-700">90만원 상당 특별혜택</span></h2>
-      <p class="desc mt-4">그린밸리 공식 혜택과 별도로 골퍼따요 김대우 팀장이 직접 제공하는 입회 프로모션입니다.</p>
-      <a href="#inquiry" class="inline-block mt-7 bg-green text-white px-8 py-4 rounded-2xl font-black">혜택 포함 상담받기</a>
+      <div class="eyebrow text-amber-700 mt-3">LIMITED BENEFIT</div>
+      <h2 class="title mt-3">선착순 단 3인<br><span class="text-amber-700">90만원 상당 특별혜택</span></h2>
+      <p class="desc mt-4">그린밸리 공식 회원혜택과 별도로 골퍼따요 김대우 팀장이 직접 제공하는 입회 특별혜택입니다.</p>
+      <a href="#inquiry" class="inline-block mt-7 bg-green text-white px-8 py-4 rounded-2xl font-black">특별혜택 포함 상담받기</a>
+      <p class="text-[11px] text-gray-400 mt-4">혜택 세부내용은 입회 후 별도 안내드립니다.</p>
     </div>
   </div>
 </section>
 
-<!-- PERSON -->
+<!-- MANAGER -->
 <section class="section bg-white" id="manager">
   <div class="container max-w-4xl">
-    <div class="grid md:grid-cols-[.8fr_1.2fr] gap-7 items-center">
-      <div class="rounded-[28px] overflow-hidden border border-gray-100 shadow-soft bg-gray-50 min-h-[330px] flex items-center justify-center">
-        <img src="./images/kim-daewoo.jpg"
-             alt="골퍼따요 김대우 팀장"
-             class="w-full h-full min-h-[330px] object-cover object-top" />
+    <div class="mobile-stack grid md:grid-cols-[.8fr_1.2fr] gap-7 items-center">
+      <div class="rounded-[28px] overflow-hidden border border-gray-100 shadow-soft bg-gray-50 min-h-[330px] flex items-center justify-center reveal">
+        <img src="./images/kim-daewoo.jpg" alt="골퍼따요 김대우 팀장" class="w-full h-full min-h-[330px] object-cover object-top" />
       </div>
-      <div>
+      <div class="reveal">
         <div class="eyebrow text-emerald-700">YOUR GOLF PARTNER</div>
-        <h2 class="title mt-3">입회 후 실제 이용까지<br>제가 계속 챙기겠습니다.</h2>
+        <h2 class="title mt-3">계약서 쓰고 끝나는 영업은 하지 않겠습니다.</h2>
         <p class="desc mt-5">
-          부부 이용인지, 4인 이용인지, 장박인지부터 먼저 확인합니다.
-          입회가 맞는 경우에는 계약부터 예약, 실제 현지 이용까지 불편함 없도록 함께 보겠습니다.
+          회원권은 한두 번 쓰고 끝나는 상품이 아닙니다.
+          입회 후 실제 태국에 갈 때 예약이 어렵거나, 어떤 구장을 골라야 할지 모르거나,
+          현지 이용방법이 헷갈릴 때 다시 연락할 사람이 있어야 합니다.
+        </p>
+        <p class="desc mt-3">
+          입회 전에는 회원님의 실제 이용횟수부터 계산하고,
+          입회 후에는 실제 이용하실 때 불편함이 없도록 계속 함께 보겠습니다.
         </p>
         <div class="mt-6 card p-6">
           <div class="font-black text-lg">🏌️ 골퍼따요 김대우 팀장</div>
@@ -696,406 +757,333 @@
   </div>
 </section>
 
-<!-- INQUIRY -->
-<section class="section bg-[#F2F7F4]" id="inquiry">
-  <div class="container max-w-5xl">
-    <div class="grid md:grid-cols-[.82fr_1.18fr] gap-7 items-start">
-      <div>
-        <div class="eyebrow text-emerald-700">MEMBERSHIP CHECK</div>
-        <h2 class="title mt-3">내가 사면 이득인지<br>먼저 확인해보세요</h2>
-        <p class="desc mt-4">
-          성함·연락처·관심 회원권만 남겨주세요.
-          이용 인원과 방문 횟수를 기준으로 어떤 구좌가 맞는지 먼저 비교해드리고,
-          실제 입회가 유리한 경우에만 상담을 이어가겠습니다.
+<!-- OBJECTIONS -->
+<section class="section bg-[#F7F8F5]" id="objections">
+  <div class="container max-w-4xl">
+    <div class="text-center reveal">
+      <div class="eyebrow text-emerald-700">BEFORE YOU DECIDE</div>
+      <h2 class="title mt-3">회원권, 꼭 필요한 사람만 사면 됩니다.</h2>
+    </div>
+
+    <div class="mt-10 space-y-4">
+      <div class="card p-6 reveal">
+        <h3 class="font-black text-lg">“회원권까지 꼭 필요한가요?”</h3>
+        <p class="desc mt-3">
+          태국을 1년에 한 번 갈까 말까 한다면 패키지가 더 편할 수 있습니다.
+          반대로 매년 반복해서 가거나 4명이 함께 움직이는 횟수가 많다면 한 번 갈 때 생기는 비용차이가 계속 누적됩니다.
+          <b class="text-gray-900">계산해보고 이득이 아니면 굳이 가입하지 않으셔도 됩니다.</b>
         </p>
-        <a href="http://pf.kakao.com/_xcxhFbs/chat" target="_blank" class="block mt-6 bg-yellow-400 text-black text-center font-black py-4 rounded-2xl">
-          💬 카카오톡 바로 상담
-        </a>
       </div>
 
-      <div class="card p-7 shadow-soft">
-        <h3 class="subtitle">내게 맞는 회원권 상담</h3>
+      <div class="card p-6 reveal">
+        <h3 class="font-black text-lg">“회원권이 너무 비싼 것 아닌가요?”</h3>
+        <p class="desc mt-3">
+          그래서 회원권 가격만 보고 판단하면 안 됩니다.
+          4인 팀이 한 번 갈 때 300~400만원 수준의 차이가 발생한다면
+          5회, 7회, 10회 누적되는 순간 회원권 가격을 보는 관점이 달라집니다.
+          <b class="text-gray-900">몇 번 사용할 것인지 먼저 계산해보세요.</b>
+        </p>
+      </div>
 
-        <form id="consultForm" class="mt-6 space-y-4">
-          <div>
-            <label class="text-xs font-black text-gray-500">성함</label>
-            <input id="name" type="text" required placeholder="예) 김대우"
-              class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 outline-none font-bold" />
-          </div>
-
-          <div>
-            <label class="text-xs font-black text-gray-500">연락처</label>
-            <input id="phone" type="tel" required placeholder="예) 010-1234-5678"
-              class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 outline-none font-bold" />
-          </div>
-
-          <div>
-            <label class="text-xs font-black text-gray-500">관심 회원권</label>
-            <div class="mt-2 grid grid-cols-3 gap-2">
-              <label class="cursor-pointer">
-                <input class="peer sr-only" type="radio" name="product" value="SILVER" required />
-                <div class="peer-checked:bg-green peer-checked:text-white peer-checked:border-green border border-gray-200 rounded-xl p-3 text-center font-black text-sm">SILVER</div>
-              </label>
-              <label class="cursor-pointer">
-                <input class="peer sr-only" type="radio" name="product" value="GOLD" />
-                <div class="peer-checked:bg-green peer-checked:text-white peer-checked:border-green border border-gray-200 rounded-xl p-3 text-center font-black text-sm">GOLD</div>
-              </label>
-              <label class="cursor-pointer">
-                <input class="peer sr-only" type="radio" name="product" value="DIAMOND" />
-                <div class="peer-checked:bg-green peer-checked:text-white peer-checked:border-green border border-gray-200 rounded-xl p-3 text-center font-black text-sm">DIAMOND</div>
-              </label>
-            </div>
-          </div>
-
-          <div>
-            <label class="text-xs font-black text-gray-500">이용 형태</label>
-            <select id="useType" class="mt-2 w-full p-4 rounded-xl bg-gray-50 border border-gray-100 outline-none font-bold">
-              <option value="미정">아직 모르겠어요</option>
-              <option value="부부/2인">부부 / 2인</option>
-              <option value="가족/지인 4인">가족 / 지인 4인</option>
-              <option value="법인">법인</option>
-              <option value="장박골프">장박골프</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="text-xs font-black text-gray-500">추가 문의</label>
-            <textarea id="message" placeholder="예) 매년 겨울 2주 정도 부부가 이용합니다."
-              class="mt-2 w-full p-4 h-28 rounded-xl bg-gray-50 border border-gray-100 outline-none font-semibold"></textarea>
-          </div>
-
-          <button id="smsSubmitBtn" type="submit"
-            class="w-full bg-green text-white py-5 rounded-xl font-black text-lg shadow-soft">
-            📱 문자로 바로 상담하기
-          </button>
-
-          <p id="formStatus" class="text-xs text-center text-gray-400 min-h-[18px]"></p>
-        </form>
-
-        <p class="text-[11px] text-gray-400 mt-4 leading-5">
-          ※ ※ 상담 내용 확인 후 김대우 팀장이 직접 연락드립니다.
+      <div class="card p-6 reveal">
+        <h3 class="font-black text-lg">“정말 5개 골프장을 쓸 수 있나요?”</h3>
+        <p class="desc mt-3">
+          Five-Star는 그린밸리를 중심으로 파트너 운영 중인 구장을 회원가로 이용하는 구조입니다.
+          다만 제휴구장 혜택은 각 골프장 운영정책에 따라 변경될 수 있으므로 실제 예약 전 최신 이용조건을 다시 확인해드립니다.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-[#071E17] text-white py-12 pb-28 md:pb-12">
+<!-- FAQ -->
+<section class="section bg-white" id="faq">
+  <div class="container max-w-4xl">
+    <div class="text-center reveal">
+      <div class="eyebrow text-emerald-700">FAQ</div>
+      <h2 class="title mt-3">자주 묻는 질문</h2>
+    </div>
+
+    <div class="mt-10 space-y-4">
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 회원권은 언제부터 사용할 수 있나요?</summary><p class="desc mt-3">입회절차와 회원등록이 완료된 이후부터 이용하게 됩니다. 정확한 등록기간은 입회 당시 안내드립니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 5개 구장을 모두 회원가로 이용할 수 있나요?</summary><p class="desc mt-3">현재 Five-Star 파트너 운영구조에 따라 이용합니다. 구장별 이용요금과 조건은 예약 시점의 최신 정책을 기준으로 다시 안내드립니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 부부가 사용하려면 어떤 회원권이 좋나요?</summary><p class="desc mt-3">대부분 기명 1 + 무기명 1 구성의 SILVER부터 비교합니다. 가족이나 지인까지 자주 함께 간다면 GOLD와 같이 비교하는 편이 좋습니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 법인은 어떤 회원권을 많이 보나요?</summary><p class="desc mt-3">특정 기명자에게 이용을 고정하기 어려운 경우 무기명 4인 DIAMOND 활용도가 높습니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 회원가에 무엇이 포함되나요?</summary><p class="desc mt-3">현재 약관상 그린피·숙박·조중석식이 포함되어 있으며 카트비와 캐디피 등은 별도입니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 장박은 어느 골프장을 많이 이용하나요?</summary><p class="desc mt-3">현재는 카오차녹을 장박 일정에 많이 활용합니다. 방콕 시내에서는 약 1시간 정도 이동합니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 회원권을 양도할 수 있나요?</summary><p class="desc mt-3">현재 약관상 입회 후 1년이 지난 뒤 규정에 따라 명의변경이 가능하며 횟수와 개서료 규정이 있습니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 연회비가 있나요?</summary><p class="desc mt-3">현재 공식 약관에는 창립회원 연회비 면제 혜택이 명시되어 있습니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 회원가가 계속 89,000원인가요?</summary><p class="desc mt-3">고정 보장 가격으로 표현하면 안 됩니다. 약관상 물가상승과 운영규정에 따라 요금은 변경될 수 있습니다.</p></details>
+      <details class="card p-6 reveal"><summary class="font-black cursor-pointer">Q. 내가 회원권을 사는 게 맞는지 모르겠어요.</summary><p class="desc mt-3">그걸 먼저 계산해드리는 게 상담의 시작입니다. 연간 방문횟수, 이용인원, 평균 체류기간을 기준으로 패키지가 나은지 회원권이 나은지부터 비교해보세요.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY -->
+<section class="section bg-[#F2F7F4]" id="inquiry">
+  <div class="container max-w-5xl">
+    <div class="mobile-stack grid md:grid-cols-[.82fr_1.18fr] gap-7 items-start">
+      <div class="reveal">
+        <div class="eyebrow text-emerald-700">BEFORE YOU BUY</div>
+        <h2 class="title mt-3">일단, 내가 사면 이득인지부터 확인하세요.</h2>
+        <p class="desc mt-4">
+          무조건 회원권부터 권하지 않습니다.
+          몇 명이 이용하는지, 1년에 몇 번 가는지, 한 번 가면 며칠 머무는지.
+          이 세 가지만 알면 어떤 구좌가 맞는지 대략적인 답이 나옵니다.
+        </p>
+        <a href="http://pf.kakao.com/_xcxhFbs/chat" target="_blank" class="block mt-6 bg-yellow-400 text-black text-center font-black py-4 rounded-2xl">
+          💬 카카오톡 바로 상담
+        </a>
+      </div>
+
+      <div class="card p-7 shadow-soft reveal">
+        <h3 class="subtitle">내 조건으로 상담받기</h3>
+        <form id="consultForm" class="mt-6 space-y-4">
+          <input id="name" type="text" required placeholder="성함" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-100 outline-none font-bold" />
+          <input id="phone" type="tel" required placeholder="연락처" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-100 outline-none font-bold" />
+
+          <div>
+            <label class="text-xs font-black text-gray-500">관심 회원권</label>
+            <div class="mt-2 grid grid-cols-3 gap-2">
+              <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="product" value="SILVER" required /><div class="peer-checked:bg-green peer-checked:text-white border border-gray-200 rounded-xl p-3 text-center font-black text-sm">SILVER</div></label>
+              <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="product" value="GOLD" /><div class="peer-checked:bg-green peer-checked:text-white border border-gray-200 rounded-xl p-3 text-center font-black text-sm">GOLD</div></label>
+              <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="product" value="DIAMOND" /><div class="peer-checked:bg-green peer-checked:text-white border border-gray-200 rounded-xl p-3 text-center font-black text-sm">DIAMOND</div></label>
+            </div>
+          </div>
+
+          <select id="useType" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-100 outline-none font-bold">
+            <option value="미정">주 이용 형태</option><option value="부부/2인">부부 / 2인</option><option value="가족/지인 4인">가족 / 지인 4인</option><option value="법인">법인</option><option value="장박골프">장박골프</option>
+          </select>
+
+          <textarea id="message" placeholder="예) 겨울마다 부부가 2주 정도 방콕에 머뭅니다." class="w-full p-4 h-28 rounded-xl bg-gray-50 border border-gray-100 outline-none font-semibold"></textarea>
+
+          <button id="smsSubmitBtn" type="submit" class="w-full bg-green text-white py-5 rounded-xl font-black text-lg shadow-soft">
+            📱 내 조건으로 상담받기
+          </button>
+          <p id="formStatus" class="text-xs text-center text-gray-400 min-h-[18px]"></p>
+        </form>
+        <p class="text-[11px] text-gray-400 mt-4">※ 상담 내용 확인 후 김대우 팀장이 직접 연락드립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section bg-[#071E17] text-white" id="final-cta">
+  <div class="container max-w-4xl text-center reveal">
+    <div class="eyebrow text-[#F2D795]">FINAL CHECK</div>
+    <h2 class="title mt-3">매년 비싼 가격으로 다시 예약하시겠습니까?</h2>
+    <div class="text-3xl md:text-4xl font-black text-[#F2D795] mt-3">아니면 앞으로 갈 태국 골프를 회원가로 바꾸시겠습니까?</div>
+    <p class="text-sm text-white/60 mt-6 leading-7 font-semibold max-w-2xl mx-auto">
+      태국 골프를 한 번만 가실 예정이라면 회원권이 필요 없을 수도 있습니다.
+      하지만 매년 겨울 반복해서 가고, 부부나 4인 팀으로 여러 번 이용할 계획이라면
+      회원권이 실제로 얼마를 아껴주는지부터 계산해보세요. 숫자를 보고 결정하시면 됩니다.
+    </p>
+
+    <div class="hero-actions mt-8 flex flex-col sm:flex-row justify-center gap-3">
+      <a href="#calculator" class="pulse-cta bg-[#F2D795] text-[#193428] px-8 py-4 rounded-2xl font-black">몇 번 가면 본전인지 지금 계산하기</a>
+      <a href="#inquiry" class="border border-white/20 bg-white/10 px-8 py-4 rounded-2xl font-black">김대우 팀장에게 바로 문의</a>
+    </div>
+
+    <div class="mt-8 text-white/75 font-black">
+      조건이 맞지 않으면 굳이 입회하실 필요 없습니다.<br>
+      맞는 분이라면, 입회부터 실제 이용까지 제가 직접 챙기겠습니다.
+    </div>
+    <div class="mt-5 text-[#F2D795] font-black">골퍼따요 김대우 팀장 · 010-2599-1095</div>
+  </div>
+</section>
+
+<footer class="bg-[#061710] text-white py-10 pb-28 md:pb-10">
   <div class="container px-5 text-center">
     <div class="text-[11px] tracking-[.18em] font-black text-[#F2D795]">BANGKOK GOLF MEMBERSHIP</div>
-    <div class="text-2xl font-black mt-2">GREEN VALLEY FIVE-STAR</div>
-    <div class="text-sm text-white/55 mt-5 leading-7">
-      골퍼따요 김대우 팀장 · 010-2599-1095<br>
-      실제 입회 전 최신 계약조건과 이용요금을 다시 확인합니다.
-    </div>
+    <div class="text-xl font-black mt-2">GREEN VALLEY FIVE-STAR</div>
+    <div class="text-xs text-white/40 mt-4">실제 입회 전 최신 계약조건과 이용요금을 다시 확인합니다.</div>
   </div>
 </footer>
 
 <!-- MOBILE STICKY -->
-<div class="fixed bottom-0 inset-x-0 z-50 md:hidden sticky border-t border-gray-100 p-3 grid grid-cols-2 gap-2">
-  <a href="sms:01025991095" class="bg-white border border-gray-200 text-green p-4 rounded-xl text-center font-black">문자 상담</a>
-  <a href="#inquiry" class="bg-green text-white p-4 rounded-xl text-center font-black">이득 계산</a>
+<div class="fixed bottom-0 inset-x-0 z-50 md:hidden sticky border-t border-gray-100 p-3 grid grid-cols-[.9fr_1.1fr] gap-2">
+  <a href="#calculator" class="bg-white border border-gray-200 text-green p-4 rounded-xl text-center font-black text-sm">본전 계산</a>
+  <a href="#inquiry" class="bg-green text-white p-4 rounded-xl text-center font-black text-sm shadow-lg">김대우 팀장 상담</a>
 </div>
 
 <script>
-  const CONSULT_API = "/api/consult";
-  const MANAGER_PHONE = "01025991095";
+  // ===== COST CALCULATOR =====
+  const KRW = new Intl.NumberFormat("ko-KR");
+  let calcState = { nights:4, days:6, rounds:4, membershipPlan:"GOLD", membershipPrice:19800000 };
 
-  function selectedProduct() {
-    return document.querySelector('input[name="product"]:checked')?.value || "";
+  function won(n){ return `${KRW.format(Math.round(Number(n)||0))}원`; }
+  function shortWon(n){
+    const v=Math.round(Number(n)||0), s=v<0?"-":"", a=Math.abs(v);
+    if(a>=100000000) return `${s}${(a/100000000).toFixed(1)}억원`;
+    if(a>=10000) return `${s}${KRW.format(Math.round(a/10000))}만원`;
+    return `${s}${won(a)}`;
   }
 
-  function buildPayload() {
+  function selectDuration(btn){
+    document.querySelectorAll(".duration-btn").forEach(b=>{
+      b.className="duration-btn tap-card border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black";
+      const sm=b.querySelector("span:last-child"); if(sm) sm.className="block text-[10px] text-gray-400 mt-1";
+    });
+    btn.className="duration-btn tap-card border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-2xl py-4 font-black";
+    const sm=btn.querySelector("span:last-child"); if(sm) sm.className="block text-[10px] opacity-60 mt-1";
+    calcState.nights=Number(btn.dataset.nights); calcState.days=Number(btn.dataset.days); calcState.rounds=Number(btn.dataset.rounds);
+    const p=Number(btn.dataset.package); document.getElementById("calcPackagePrice").value=p;
+    document.getElementById("packagePresetLabel").textContent=`${calcState.nights}박${calcState.days}일 약 ${KRW.format(Math.round(p/10000))}만원`;
+    calculateMembership();
+  }
+
+  function selectMembership(btn){
+    document.querySelectorAll(".membership-btn").forEach(b=>{
+      b.classList.remove("border-[#D8B56A]","bg-[#FFF8E8]"); b.classList.add("border-gray-200","bg-white");
+    });
+    btn.classList.remove("border-gray-200","bg-white"); btn.classList.add("border-[#D8B56A]","bg-[#FFF8E8]");
+    calcState.membershipPlan=btn.dataset.plan; calcState.membershipPrice=Number(btn.dataset.price); calculateMembership();
+  }
+
+  function selectAir(btn){
+    document.querySelectorAll(".air-btn").forEach(b=>{
+      b.classList.remove("border-[#0B3D2E]","bg-[#0B3D2E]","text-white"); b.classList.add("border-gray-200");
+    });
+    btn.classList.remove("border-gray-200"); btn.classList.add("border-[#0B3D2E]","bg-[#0B3D2E]","text-white");
+    document.getElementById("calcAirfare").value=btn.dataset.air; calculateMembership();
+  }
+
+  function calculateMembership(){
+    const packagePerPerson=Number(document.getElementById("calcPackagePrice").value)||0;
+    const airfarePerPerson=Number(document.getElementById("calcAirfare").value)||0;
+    const teamExtras=Number(document.getElementById("calcTeamExtras").value)||0;
+    const weekendRounds=Math.min(calcState.rounds,Math.max(0,Number(document.getElementById("calcWeekendRounds").value)||0));
+    const weekdayRounds=Math.max(0,calcState.rounds-weekendRounds);
+
+    const packageTeam=packagePerPerson*4;
+    const memberLocalPerPerson=weekdayRounds*89000+weekendRounds*118000;
+    const memberPerPerson=memberLocalPerPerson+airfarePerPerson;
+    const memberTeam=memberPerPerson*4+teamExtras;
+    const savingPerTrip=packageTeam-memberTeam;
+    const savingPct=packageTeam>0?(savingPerTrip/packageTeam)*100:0;
+
+    const breakEvenTrips=savingPerTrip>0?Math.ceil(calcState.membershipPrice/savingPerTrip):null;
+    const saving5Gross=savingPerTrip*5, saving10Gross=savingPerTrip*10;
+    const saving5Net=saving5Gross-calcState.membershipPrice, saving10Net=saving10Gross-calcState.membershipPrice;
+
+    document.getElementById("resultDuration").textContent=`${calcState.nights}박${calcState.days}일`;
+    document.getElementById("resultPackageTeam").textContent=shortWon(packageTeam);
+    document.getElementById("resultPackagePerPerson").textContent=`1인 약 ${shortWon(packagePerPerson)}`;
+    document.getElementById("resultMemberTeam").textContent=shortWon(memberTeam);
+    document.getElementById("resultMemberPerPerson").textContent=`1인 약 ${shortWon(memberTeam/4)}`;
+
+    const se=document.getElementById("resultSavingTeam"), pe=document.getElementById("resultSavingPercent");
+    if(savingPerTrip>=0){
+      se.textContent=`${shortWon(savingPerTrip)} 절감`;
+      se.className="big-saving text-[42px] md:text-[54px] leading-tight font-black text-amber-800 mt-2";
+      pe.textContent=`패키지 대비 약 ${Math.max(0,savingPct).toFixed(0)}% 차이`;
+    }else{
+      se.textContent=`${shortWon(Math.abs(savingPerTrip))} 더 필요`;
+      se.className="big-saving text-[36px] md:text-[44px] leading-tight font-black text-red-600 mt-2";
+      pe.textContent="현재 조건에서는 패키지가 더 저렴합니다";
+    }
+
+    document.getElementById("resultBreakEvenTrips").textContent=breakEvenTrips?`약 ${breakEvenTrips}회`:"-";
+    document.getElementById("resultBreakEvenSub").textContent=breakEvenTrips
+      ?`4인 1팀이 약 ${breakEvenTrips}번 이용하면 ${calcState.membershipPlan} 취득비에 근접`
+      :"현재 조건에서는 회원권 취득비 회수가 어렵습니다.";
+
+    document.getElementById("resultSaving5").textContent=savingPerTrip>0?`${shortWon(saving5Gross)} 절감`:"-";
+    document.getElementById("resultSaving10").textContent=savingPerTrip>0?`${shortWon(saving10Gross)} 절감`:"-";
+
+    document.getElementById("resultSaving5Net").textContent=savingPerTrip>0
+      ?(saving5Net>=0?`회원권 비용 제외 후 +${shortWon(saving5Net)}`:`회원권 비용까지는 ${shortWon(Math.abs(saving5Net))} 부족`):"";
+
+    document.getElementById("resultSaving10Net").textContent=savingPerTrip>0
+      ?(saving10Net>=0?`회원권 비용 제외 후 +${shortWon(saving10Net)}`:`회원권 비용까지는 ${shortWon(Math.abs(saving10Net))} 부족`):"";
+
+    const lm=document.getElementById("resultLongMessage"), le=document.getElementById("resultLongSaving");
+    if(saving10Net>=0){
+      le.textContent=`10회 이용 시 약 ${shortWon(saving10Net)} 남습니다`;
+      lm.className="rounded-3xl p-6 text-center bg-[#F2D795] text-[#193428]";
+    }else if(savingPerTrip>0){
+      le.textContent=`10회 이용해도 약 ${shortWon(Math.abs(saving10Net))} 부족합니다`;
+      lm.className="glass rounded-3xl p-6 text-center text-white";
+    }else{
+      le.textContent="현재 조건에서는 회원권 절감효과가 없습니다";
+      lm.className="rounded-3xl p-6 text-center bg-red-500/15 border border-red-400/20 text-red-100";
+    }
+
+    const card=document.getElementById("calcResultCard");
+    card.classList.remove("scale-[1.015]");
+    requestAnimationFrame(()=>{card.classList.add("scale-[1.015]");setTimeout(()=>card.classList.remove("scale-[1.015]"),280)});
+  }
+
+  document.querySelectorAll(".duration-btn").forEach(b=>b.addEventListener("click",()=>selectDuration(b)));
+  document.querySelectorAll(".membership-btn").forEach(b=>b.addEventListener("click",()=>selectMembership(b)));
+  document.querySelectorAll(".air-btn").forEach(b=>b.addEventListener("click",()=>selectAir(b)));
+  ["calcPackagePrice","calcTeamExtras","calcWeekendRounds"].forEach(id=>{
+    const el=document.getElementById(id); if(el){el.addEventListener("input",calculateMembership);el.addEventListener("change",calculateMembership)}
+  });
+  document.getElementById("calcBtn").addEventListener("click",calculateMembership);
+
+  // product buttons -> inquiry
+  document.querySelectorAll(".product-cta").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const value=btn.dataset.product;
+      const radio=document.querySelector(`input[name="product"][value="${value}"]`);
+      if(radio) radio.checked=true;
+    });
+  });
+
+  // inquiry -> telegram + SMS
+  const CONSULT_API="/api/consult", MANAGER_PHONE="01025991095";
+  function selectedProduct(){return document.querySelector('input[name="product"]:checked')?.value||""}
+  function buildPayload(){
     return {
-      name: document.getElementById("name").value.trim(),
-      phone: document.getElementById("phone").value.trim(),
-      product: selectedProduct(),
-      useType: document.getElementById("useType").value,
-      message: document.getElementById("message").value.trim(),
-      page: "Green Valley Five-Star Landing",
-      createdAt: new Date().toISOString()
+      name:document.getElementById("name").value.trim(),
+      phone:document.getElementById("phone").value.trim(),
+      product:selectedProduct(),
+      useType:document.getElementById("useType").value,
+      message:document.getElementById("message").value.trim(),
+      page:"Green Valley Five-Star Landing",
+      createdAt:new Date().toISOString()
     };
   }
-
-  function smsHref(data) {
-    const text =
-`[그린밸리 Five-Star 회원권 상담]
+  function smsHref(data){
+    const text=`[그린밸리 Five-Star 회원권 상담]
 성함: ${data.name}
 관심회원권: ${data.product}
 이용형태: ${data.useType}
 연락처: ${data.phone}
-문의: ${data.message || "없음"}`;
-
-    const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    return `sms:${MANAGER_PHONE}${isiOS ? "&" : "?"}body=${encodeURIComponent(text)}`;
+문의: ${data.message||"없음"}`;
+    const isiOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
+    return `sms:${MANAGER_PHONE}${isiOS?"&":"?"}body=${encodeURIComponent(text)}`;
   }
-
-  // 가격 카드에서 클릭하면 상담폼 상품 자동선택
-  document.querySelectorAll(".product-cta").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const value = btn.dataset.product;
-      const radio = document.querySelector(`input[name="product"][value="${value}"]`);
-      if (radio) radio.checked = true;
-    });
-  });
-
-  document.getElementById("consultForm").addEventListener("submit", async (e) => {
+  document.getElementById("consultForm").addEventListener("submit",async(e)=>{
     e.preventDefault();
-
-    const data = buildPayload();
-    const status = document.getElementById("formStatus");
-    const btn = document.getElementById("smsSubmitBtn");
-
-    if (!data.name || !data.phone || !data.product) {
-      status.textContent = "성함, 연락처, 관심 회원권을 선택해주세요.";
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = "상담 연결 중...";
-    status.textContent = "상담 정보를 전송하고 문자 앱을 엽니다.";
-
-    // 텔레그램 알림: 서버에서 Bot Token을 보호한 채 전송
-    try {
-      await fetch(CONSULT_API, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data),
-        keepalive: true
-      });
-    } catch (err) {
-      // API가 실패해도 문자 문의는 계속 가능
-      console.warn("Telegram notification failed:", err);
-    }
-
-    // 사용자 문자 앱 열기
-    window.location.href = smsHref(data);
-
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.textContent = "📱 문자로 바로 상담하기";
-      status.textContent = "";
-    }, 1200);
+    const data=buildPayload(),status=document.getElementById("formStatus"),btn=document.getElementById("smsSubmitBtn");
+    if(!data.name||!data.phone||!data.product){status.textContent="성함, 연락처, 관심 회원권을 선택해주세요.";return}
+    btn.disabled=true;btn.textContent="상담 연결 중...";status.textContent="상담 내용을 확인하고 있습니다.";
+    try{
+      await fetch(CONSULT_API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data),keepalive:true});
+    }catch(err){console.warn(err)}
+    window.location.href=smsHref(data);
+    setTimeout(()=>{btn.disabled=false;btn.textContent="📱 내 조건으로 상담받기";status.textContent=""},1200);
   });
 
-  // ===== SIMPLE 4-PERSON BREAK-EVEN CALCULATOR =====
-  const KRW = new Intl.NumberFormat("ko-KR");
-
-  let calcState = {
-    nights: 4,
-    days: 6,
-    rounds: 4,
-    membershipPlan: "GOLD",
-    membershipPrice: 19800000
-  };
-
-  function won(n) {
-    return `${KRW.format(Math.round(Number(n) || 0))}원`;
-  }
-
-  function shortWon(n) {
-    const value = Math.round(Number(n) || 0);
-    const sign = value < 0 ? "-" : "";
-    const abs = Math.abs(value);
-    if (abs >= 100000000) return `${sign}${(abs / 100000000).toFixed(1)}억원`;
-    if (abs >= 10000) return `${sign}${KRW.format(Math.round(abs / 10000))}만원`;
-    return `${sign}${won(abs)}`;
-  }
-
-  function selectDuration(btn) {
-    document.querySelectorAll(".duration-btn").forEach(b => {
-      b.className = "duration-btn border-2 border-gray-200 bg-white text-gray-700 rounded-2xl py-4 font-black transition hover:border-emerald-300";
-      const small = b.querySelector("span:last-child");
-      if (small) small.className = "block text-[10px] text-gray-400 mt-1";
-    });
-
-    btn.className = "duration-btn border-2 border-[#0B3D2E] bg-[#0B3D2E] text-white rounded-2xl py-4 font-black transition";
-    const small = btn.querySelector("span:last-child");
-    if (small) small.className = "block text-[10px] opacity-60 mt-1";
-
-    calcState.nights = Number(btn.dataset.nights);
-    calcState.days = Number(btn.dataset.days);
-    calcState.rounds = Number(btn.dataset.rounds);
-
-    const packagePrice = Number(btn.dataset.package);
-    document.getElementById("calcPackagePrice").value = packagePrice;
-    document.getElementById("packagePresetLabel").textContent =
-      `${calcState.nights}박${calcState.days}일 약 ${KRW.format(Math.round(packagePrice / 10000))}만원`;
-
-    const weekendSelect = document.getElementById("calcWeekendRounds");
-    if (Number(weekendSelect.value) > calcState.rounds) weekendSelect.value = "0";
-
-    calculateMembership();
-  }
-
-  function selectMembership(btn) {
-    document.querySelectorAll(".membership-btn").forEach(b => {
-      b.classList.remove("border-[#D8B56A]", "bg-[#FFF8E8]");
-      b.classList.add("border-gray-200", "bg-white");
-    });
-
-    btn.classList.remove("border-gray-200", "bg-white");
-    btn.classList.add("border-[#D8B56A]", "bg-[#FFF8E8]");
-
-    calcState.membershipPlan = btn.dataset.plan;
-    calcState.membershipPrice = Number(btn.dataset.price);
-    calculateMembership();
-  }
-
-  function selectAir(btn) {
-    document.querySelectorAll(".air-btn").forEach(b => {
-      b.classList.remove("border-[#0B3D2E]", "bg-[#0B3D2E]", "text-white");
-      b.classList.add("border-gray-200");
-    });
-
-    btn.classList.remove("border-gray-200");
-    btn.classList.add("border-[#0B3D2E]", "bg-[#0B3D2E]", "text-white");
-
-    document.getElementById("calcAirfare").value = btn.dataset.air;
-    calculateMembership();
-  }
-
-  function calculateMembership() {
-    const packagePerPerson = Number(document.getElementById("calcPackagePrice").value) || 0;
-    const airfarePerPerson = Number(document.getElementById("calcAirfare").value) || 0;
-    const teamExtras = Number(document.getElementById("calcTeamExtras").value) || 0;
-
-    const weekendRounds = Math.min(
-      calcState.rounds,
-      Math.max(0, Number(document.getElementById("calcWeekendRounds").value) || 0)
-    );
-    const weekdayRounds = Math.max(0, calcState.rounds - weekendRounds);
-
-    // Package: entered 1-person total × 4
-    const packageTeam = packagePerPerson * 4;
-
-    // Member: 89,000 weekday / 118,000 weekend per person per 18-hole day + airfare
-    const memberLocalPerPerson = weekdayRounds * 89000 + weekendRounds * 118000;
-    const memberPerPerson = memberLocalPerPerson + airfarePerPerson;
-    const memberTeam = memberPerPerson * 4 + teamExtras;
-
-    const savingPerTrip = packageTeam - memberTeam;
-    const savingPct = packageTeam > 0 ? (savingPerTrip / packageTeam) * 100 : 0;
-
-    let breakEvenTrips = null;
-    if (savingPerTrip > 0) {
-      breakEvenTrips = Math.ceil(calcState.membershipPrice / savingPerTrip);
-    }
-
-    const saving5Gross = savingPerTrip * 5;
-    const saving10Gross = savingPerTrip * 10;
-    const saving5Net = saving5Gross - calcState.membershipPrice;
-    const saving10Net = saving10Gross - calcState.membershipPrice;
-
-    document.getElementById("resultDuration").textContent = `${calcState.nights}박${calcState.days}일`;
-    document.getElementById("resultPackageTeam").textContent = shortWon(packageTeam);
-    document.getElementById("resultPackagePerPerson").textContent = `1인 약 ${shortWon(packagePerPerson)}`;
-    document.getElementById("resultMemberTeam").textContent = shortWon(memberTeam);
-    document.getElementById("resultMemberPerPerson").textContent = `1인 약 ${shortWon(memberTeam / 4)}`;
-
-    const savingEl = document.getElementById("resultSavingTeam");
-    const pctEl = document.getElementById("resultSavingPercent");
-
-    if (savingPerTrip >= 0) {
-      savingEl.textContent = `${shortWon(savingPerTrip)} 절감`;
-      savingEl.className = "text-[42px] md:text-[54px] leading-tight font-black text-amber-800 mt-2";
-      pctEl.textContent = `패키지 대비 약 ${Math.max(0, savingPct).toFixed(0)}% 차이`;
-    } else {
-      savingEl.textContent = `${shortWon(Math.abs(savingPerTrip))} 더 필요`;
-      savingEl.className = "text-[36px] md:text-[44px] leading-tight font-black text-red-600 mt-2";
-      pctEl.textContent = "현재 조건에서는 패키지가 더 저렴합니다";
-    }
-
-    document.getElementById("resultBreakEvenTrips").textContent =
-      breakEvenTrips ? `약 ${breakEvenTrips}회` : "-";
-
-    document.getElementById("resultBreakEvenSub").textContent =
-      breakEvenTrips
-        ? `4인 1팀이 약 ${breakEvenTrips}번 이용하면 ${calcState.membershipPlan} 취득비에 근접`
-        : "현재 조건에서는 회원권 취득비 회수가 어렵습니다.";
-
-    document.getElementById("resultSaving5").textContent =
-      savingPerTrip > 0 ? `${shortWon(saving5Gross)} 절감` : "-";
-    document.getElementById("resultSaving10").textContent =
-      savingPerTrip > 0 ? `${shortWon(saving10Gross)} 절감` : "-";
-
-    document.getElementById("resultSaving5Net").textContent =
-      savingPerTrip > 0
-        ? (saving5Net >= 0
-            ? `회원권 비용 제외 후 +${shortWon(saving5Net)}`
-            : `회원권 비용까지는 ${shortWon(Math.abs(saving5Net))} 부족`)
-        : "";
-
-    document.getElementById("resultSaving10Net").textContent =
-      savingPerTrip > 0
-        ? (saving10Net >= 0
-            ? `회원권 비용 제외 후 +${shortWon(saving10Net)}`
-            : `회원권 비용까지는 ${shortWon(Math.abs(saving10Net))} 부족`)
-        : "";
-
-    const longMessage = document.getElementById("resultLongMessage");
-    const longSavingEl = document.getElementById("resultLongSaving");
-
-    if (saving10Net >= 0) {
-      longSavingEl.textContent = `10회 이용 시 약 ${shortWon(saving10Net)} 남습니다`;
-      longMessage.className = "rounded-3xl p-6 text-center bg-[#F2D795] text-[#193428]";
-    } else if (savingPerTrip > 0) {
-      longSavingEl.textContent = `10회 이용해도 약 ${shortWon(Math.abs(saving10Net))} 부족합니다`;
-      longMessage.className = "rounded-3xl p-6 text-center bg-white/8 border border-white/10 text-white";
-    } else {
-      longSavingEl.textContent = "현재 조건에서는 회원권 절감효과가 없습니다";
-      longMessage.className = "rounded-3xl p-6 text-center bg-red-500/15 border border-red-400/20 text-red-100";
-    }
-
-    const card = document.getElementById("calcResultCard");
-    card.classList.remove("scale-[1.015]");
-    requestAnimationFrame(() => {
-      card.classList.add("scale-[1.015]");
-      setTimeout(() => card.classList.remove("scale-[1.015]"), 280);
-    });
-  }
-
-  document.querySelectorAll(".duration-btn").forEach(btn =>
-    btn.addEventListener("click", () => selectDuration(btn))
-  );
-
-  document.querySelectorAll(".membership-btn").forEach(btn =>
-    btn.addEventListener("click", () => selectMembership(btn))
-  );
-
-  document.querySelectorAll(".air-btn").forEach(btn =>
-    btn.addEventListener("click", () => selectAir(btn))
-  );
-
-  ["calcPackagePrice", "calcTeamExtras", "calcWeekendRounds"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener("input", calculateMembership);
-      el.addEventListener("change", calculateMembership);
-    }
-  });
-
-  document.getElementById("calcBtn").addEventListener("click", calculateMembership);
-
-  // subtle reveal animation
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("opacity-100", "translate-y-0");
-        entry.target.classList.remove("opacity-0", "translate-y-4");
+  // scroll reveal
+  const revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("opacity-100","translate-y-0");
+        entry.target.classList.remove("opacity-0","translate-y-4");
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll(".reveal").forEach(el => {
-    el.classList.add("opacity-0", "translate-y-4", "transition-all", "duration-700");
+  },{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>{
+    el.classList.add("opacity-0","translate-y-4","transition-all","duration-700");
     revealObserver.observe(el);
   });
 
   calculateMembership();
-
 </script>
 </body>
 </html>
