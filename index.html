@@ -158,6 +158,7 @@
       <div class="mt-7 p-4 rounded-2xl border border-[#F2D38E]/30 bg-black/15 max-w-xl">
         <div class="text-[#F4DCA2] font-black">🎁 선착순 3인 · 90만원 상당 특별혜택</div>
         <div class="text-xs text-white/60 mt-1">골퍼따요 김대우 팀장 단독 제공</div>
+        <div class="text-[11px] text-white/45 mt-1">세부 혜택은 입회 후 안내드립니다.</div>
       </div>
 
       <div class="hero-actions mt-8 flex flex-col sm:flex-row gap-3">
@@ -546,6 +547,12 @@
         <div class="p-6"><h3 class="font-black text-lg">카오차녹</h3><p class="desc mt-2">장박골프 이용 시 많이 선택. 방콕 시내에서 약 1시간 거리.</p></div>
       </article>
     </div>
+
+    <div class="mt-8 text-center reveal">
+      <a href="#inquiry" class="inline-block bg-green text-white px-7 py-4 rounded-2xl font-black shadow-soft hover:-translate-y-0.5 transition">
+        5개 골프장 이용방법 상담받기
+      </a>
+    </div>
   </div>
 </section>
 
@@ -640,6 +647,10 @@
         <img src="./images/hotel-tisha1.jpg" alt="티샤 호텔 수영장" class="w-full aspect-[16/10] object-cover" />
         <div class="p-6"><h3 class="font-black text-lg">휴식까지 고려한 체류</h3><p class="desc mt-2">라운드 후 쉬는 시간까지 고려해 숙소와 골프장을 함께 설계합니다.</p></div>
       </article>
+    </div>
+
+    <div class="mt-7 text-center font-black text-green reveal">
+      어디서 치는지만큼, 어디서 쉬는지도 같이 설계해드립니다.
     </div>
   </div>
 </section>
@@ -751,6 +762,9 @@
         <div class="mt-6 card p-6">
           <div class="font-black text-lg">🏌️ 골퍼따요 김대우 팀장</div>
           <a href="tel:01025991095" class="block text-3xl font-black text-green mt-2">010-2599-1095</a>
+          <a href="#inquiry" class="block mt-4 bg-green text-white text-center py-4 rounded-xl font-black">
+            김대우 팀장에게 바로 상담
+          </a>
         </div>
       </div>
     </div>
@@ -852,7 +866,12 @@
           </div>
 
           <select id="useType" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-100 outline-none font-bold">
-            <option value="미정">주 이용 형태</option><option value="부부/2인">부부 / 2인</option><option value="가족/지인 4인">가족 / 지인 4인</option><option value="법인">법인</option><option value="장박골프">장박골프</option>
+            <option value="" selected disabled>주 이용 형태를 선택해주세요</option>
+            <option value="부부/2인">부부 / 2인</option>
+            <option value="가족/지인 4인">가족 / 지인 4인</option>
+            <option value="법인">법인</option>
+            <option value="장박골프">장박골프</option>
+            <option value="잘 모르겠음">잘 모르겠음</option>
           </select>
 
           <textarea id="message" placeholder="예) 겨울마다 부부가 2주 정도 방콕에 머뭅니다." class="w-full p-4 h-28 rounded-xl bg-gray-50 border border-gray-100 outline-none font-semibold"></textarea>
@@ -862,7 +881,10 @@
           </button>
           <p id="formStatus" class="text-xs text-center text-gray-400 min-h-[18px]"></p>
         </form>
-        <p class="text-[11px] text-gray-400 mt-4">※ 상담 내용 확인 후 김대우 팀장이 직접 연락드립니다.</p>
+        <div class="mt-5 text-center">
+          <div class="font-black text-green">골퍼따요 김대우 팀장 · 010-2599-1095</div>
+          <p class="text-[11px] text-gray-400 mt-2">※ 상담 내용 확인 후 김대우 팀장이 직접 연락드립니다.</p>
+        </div>
       </div>
     </div>
   </div>
