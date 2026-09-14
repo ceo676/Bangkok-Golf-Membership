@@ -151,6 +151,26 @@
       .hero-media > div{aspect-ratio:16/9}
     }
 
+  
+    /* ===== ROUTE INFOGRAPHIC ===== */
+    #route-infographic img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    @media(max-width:767px){
+      #route-infographic{
+        margin-left:-4px;
+        margin-right:-4px;
+      }
+      #route-infographic > div:nth-of-type(2){
+        border-radius:18px;
+      }
+      #route-infographic img{
+        min-width:100%;
+      }
+    }
+
   </style>
 </head>
 <body class="antialiased">
@@ -230,6 +250,248 @@
     <div class="metric text-center"><div class="text-2xl">🤝</div><div class="font-black mt-2">현지 운영 지원</div><div class="text-xs text-gray-500 mt-1">실제 이용까지 연계</div></div>
   </div>
 </section>
+
+
+<!-- FLIGHT & ACCESS -->
+<section class="section bg-white" id="access">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="eyebrow text-emerald-700">FLIGHT & ACCESS</div>
+      <h2 class="title mt-3">방콕 골프의 시작은<br>수완나품공항에서 가깝습니다.</h2>
+      <p class="desc mt-4">
+        인천·김해에서 수완나품공항(BKK) 직항편을 이용할 수 있고,
+        도착 후 그린밸리CC까지는 약 15분.
+        아래 동선 인포그래픽처럼 공항 가까운 숙소와 골프장을 묶어
+        이동시간을 줄이는 것이 Five-Star 일정의 큰 장점입니다.
+      </p>
+    </div>
+
+    <!-- FLIGHTS -->
+    <div class="mt-10 grid md:grid-cols-3 gap-5 reveal">
+      <div class="card p-6">
+        <div class="text-xs font-black text-emerald-700">INCHEON · ICN</div>
+        <h3 class="font-black text-xl mt-2">인천 → 방콕 직항</h3>
+        <p class="desc mt-3">
+          대한항공 · 아시아나 · 타이항공 · 에어프레미아 · 제주항공 · 티웨이 등
+          다양한 직항편 선택이 가능합니다.
+        </p>
+        <div class="mt-4 text-sm font-black text-green">비행시간 약 6시간</div>
+      </div>
+
+      <div class="card p-6">
+        <div class="text-xs font-black text-emerald-700">BUSAN · PUS</div>
+        <h3 class="font-black text-xl mt-2">김해 → 방콕 직항</h3>
+        <p class="desc mt-3">
+          에어부산 · 제주항공 · 진에어 등 직항편을 이용할 수 있어
+          영남권에서도 방콕 골프 접근이 편리합니다.
+        </p>
+        <div class="mt-4 text-sm font-black text-green">비행시간 약 5시간 50분</div>
+      </div>
+
+      <div class="card p-6">
+        <div class="text-xs font-black text-gray-400">CHEONGJU · CJJ</div>
+        <h3 class="font-black text-xl mt-2">청주 출발</h3>
+        <p class="desc mt-3">
+          현재 수완나품공항 직항 정기편은 확인되지 않아
+          출발일에 따라 경유편 또는 인천 출발편을 함께 비교하는 것이 좋습니다.
+        </p>
+        <div class="mt-4 text-sm font-black text-gray-500">일정별 최신 항공편 확인</div>
+      </div>
+    </div>
+
+
+    <!-- ROUTE INFOGRAPHIC -->
+    <div class="mt-10 reveal" id="route-infographic">
+      <div class="text-center max-w-3xl mx-auto mb-6">
+        <div class="eyebrow text-amber-700">AIRPORT → HOTEL → GOLF COURSE</div>
+        <h3 class="subtitle mt-2">도착 후 이동동선을 한눈에</h3>
+        <p class="desc mt-3">
+          수완나품공항에서 숙소, 그리고 주요 골프장까지의 흐름을 한 장으로 정리했습니다.
+          실제 이동시간은 교통상황에 따라 달라질 수 있습니다.
+        </p>
+      </div>
+
+      <div class="rounded-[28px] overflow-hidden bg-[#F7F4EA] shadow-2xl border border-[#E8DFC9]">
+        <img
+          src="./images/bangkok1.png"
+          alt="수완나품공항에서 Tisha Hotel, Amaranth Suvarnabhumi Hotel과 Green Valley CC, Lakewood CC, Subhapruek GC까지의 이동 동선 인포그래픽"
+          class="w-full h-auto block"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="mt-4 flex flex-col sm:flex-row justify-center gap-3">
+        <a
+          href="https://www.google.com/maps/dir/?api=1&origin=Suvarnabhumi+Airport&destination=Green+Valley+Country+Club+Bangkok"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-green text-white font-black text-sm hover:-translate-y-0.5 transition"
+        >
+          🗺️ 공항 → 그린밸리 지도 보기
+        </a>
+        <a
+          href="https://www.google.com/maps/dir/?api=1&origin=Suvarnabhumi+Airport&destination=Tisha+Hotel+Samut+Prakan"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-200 bg-white text-green font-black text-sm hover:-translate-y-0.5 transition"
+        >
+          🏨 공항 → 티샤호텔 지도 보기
+        </a>
+      </div>
+    </div>
+
+    <!-- AIRPORT ACCESS HERO -->
+    <div class="mt-10 rounded-3xl bg-[#071E17] text-white p-7 md:p-9 shadow-soft reveal">
+      <div class="grid md:grid-cols-[.9fr_1.1fr] gap-7 items-center">
+        <div>
+          <div class="eyebrow text-[#F2D795]">SUVARNABHUMI AIRPORT</div>
+          <h3 class="title mt-3">공항 도착 후<br>바로 골프 생활권.</h3>
+          <p class="text-sm text-white/65 mt-4 leading-7 font-semibold">
+            그린밸리CC 공식 안내 기준 수완나품공항에서 약 15분,
+            방콕 중심부에서는 약 30분 거리입니다.
+            공항에서 오래 이동하지 않고 바로 골프·숙박 일정으로 연결할 수 있습니다.
+          </p>
+
+          <a
+            href="https://www.google.com/maps/dir/?api=1&origin=Suvarnabhumi+Airport&destination=Green+Valley+Country+Club+Bangkok"
+            target="_blank"
+            rel="noopener"
+            class="inline-block mt-6 bg-[#F2D795] text-[#193428] px-6 py-3.5 rounded-xl font-black"
+          >
+            Google 지도에서 경로 보기 →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="glass rounded-2xl p-5 text-center">
+            <div class="text-xs text-white/45 font-bold">수완나품공항 →</div>
+            <div class="text-3xl font-black text-[#F2D795] mt-2">약 15분</div>
+            <div class="text-xs text-white/60 mt-2">그린밸리CC</div>
+          </div>
+
+          <div class="glass rounded-2xl p-5 text-center">
+            <div class="text-xs text-white/45 font-bold">방콕 중심부 →</div>
+            <div class="text-3xl font-black text-[#F2D795] mt-2">약 30분</div>
+            <div class="text-xs text-white/60 mt-2">그린밸리CC</div>
+          </div>
+
+          <div class="glass rounded-2xl p-5 text-center">
+            <div class="text-xs text-white/45 font-bold">수완나품공항 →</div>
+            <div class="text-3xl font-black text-[#F2D795] mt-2">약 20분</div>
+            <div class="text-xs text-white/60 mt-2">Tisha Hotel</div>
+          </div>
+
+          <div class="glass rounded-2xl p-5 text-center">
+            <div class="text-xs text-white/45 font-bold">Tisha Hotel →</div>
+            <div class="text-3xl font-black text-[#F2D795] mt-2">약 10분</div>
+            <div class="text-xs text-white/60 mt-2">수파프룩CC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROUTES -->
+    <div class="mt-8">
+      <div class="text-center mb-6 reveal">
+        <h3 class="subtitle">숙소에서 골프장까지도 가깝게</h3>
+        <p class="desc mt-2">자주 이용하는 이동동선을 기준으로 정리했습니다.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <a
+          href="https://www.google.com/maps/dir/?api=1&origin=Tisha+Hotel+Samut+Prakan&destination=Subhapruek+Golf+Club"
+          target="_blank"
+          rel="noopener"
+          class="card p-5 flex items-center justify-between gap-4 reveal hover:-translate-y-0.5 transition"
+        >
+          <div>
+            <div class="text-xs text-gray-400 font-black">TISHA HOTEL → SUBHAPRUEK</div>
+            <div class="font-black mt-1">티샤 호텔 → 수파프룩CC</div>
+          </div>
+          <div class="text-xl font-black text-green whitespace-nowrap">약 10분</div>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&origin=Tisha+Hotel+Samut+Prakan&destination=Lakewood+Country+Club+Thailand"
+          target="_blank"
+          rel="noopener"
+          class="card p-5 flex items-center justify-between gap-4 reveal hover:-translate-y-0.5 transition"
+        >
+          <div>
+            <div class="text-xs text-gray-400 font-black">TISHA HOTEL → LAKEWOOD</div>
+            <div class="font-black mt-1">티샤 호텔 → 레이크우드CC</div>
+          </div>
+          <div class="text-xl font-black text-green whitespace-nowrap">약 30분</div>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&origin=Amaranth+Suvarnabhumi+Hotel&destination=Green+Valley+Country+Club+Bangkok"
+          target="_blank"
+          rel="noopener"
+          class="card p-5 flex items-center justify-between gap-4 reveal hover:-translate-y-0.5 transition"
+        >
+          <div>
+            <div class="text-xs text-gray-400 font-black">AMARANTH → GREEN VALLEY</div>
+            <div class="font-black mt-1">아마란스 호텔 → 그린밸리CC</div>
+          </div>
+          <div class="text-xl font-black text-green whitespace-nowrap">약 30분 내외</div>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&origin=Amaranth+Suvarnabhumi+Hotel&destination=Lakewood+Country+Club+Thailand"
+          target="_blank"
+          rel="noopener"
+          class="card p-5 flex items-center justify-between gap-4 reveal hover:-translate-y-0.5 transition"
+        >
+          <div>
+            <div class="text-xs text-gray-400 font-black">AMARANTH → LAKEWOOD</div>
+            <div class="font-black mt-1">아마란스 호텔 → 레이크우드CC</div>
+          </div>
+          <div class="text-xl font-black text-green whitespace-nowrap">약 7.7km</div>
+        </a>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-4 reveal">
+        <div class="good rounded-2xl p-5">
+          <div class="font-black text-green">아마란스 수완나품 호텔</div>
+          <p class="desc mt-2 !text-gray-700">
+            수완나품공항 왕복 무료 셔틀을 운영해 입·출국 동선이 편리합니다.
+            사전예약이 필요하며 시간대별로 운행됩니다.
+          </p>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&origin=Suvarnabhumi+Airport&destination=Amaranth+Suvarnabhumi+Hotel"
+            target="_blank"
+            rel="noopener"
+            class="inline-block mt-3 text-sm font-black text-green"
+          >
+            공항 → 아마란스 Google 지도 →
+          </a>
+        </div>
+
+        <div class="good rounded-2xl p-5">
+          <div class="font-black text-green">Tisha Hotel</div>
+          <p class="desc mt-2 !text-gray-700">
+            공식 안내 기준 수완나품공항 약 20분,
+            수파프룩 약 10분, 레이크우드 약 30분으로 골퍼에게 편한 위치입니다.
+          </p>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&origin=Suvarnabhumi+Airport&destination=Tisha+Hotel+Samut+Prakan"
+            target="_blank"
+            rel="noopener"
+            class="inline-block mt-3 text-sm font-black text-green"
+          >
+            공항 → 티샤 Google 지도 →
+          </a>
+        </div>
+      </div>
+
+      <p class="text-[11px] text-gray-400 mt-5 text-center leading-5 reveal">
+        ※ 이동시간은 교통상황과 출발시간에 따라 달라질 수 있습니다. 버튼을 누르면 Google 지도에서 현재 경로를 확인할 수 있습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 <!-- PROBLEM -->
 <section class="section bg-white" id="problem">
