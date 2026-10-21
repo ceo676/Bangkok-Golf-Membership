@@ -1551,7 +1551,30 @@
   }
 }
 
-  </style>
+  
+/* Hotel gallery — existing repository images */
+.gv-hotels{background:#f7fbff;padding:88px 20px 96px;border-bottom:1px solid #e4ebf4}
+.gv-hotels-wrap{max-width:1190px;margin:0 auto}
+.gv-hotels-head{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:32px}
+.gv-hotels-head .kicker{color:#216bb0;font-size:12px;font-weight:850;letter-spacing:.13em}
+.gv-hotels-head h2{font-size:clamp(30px,3.5vw,46px);font-weight:900;letter-spacing:-.055em;line-height:1.28;color:#173f75;margin:10px 0 0}
+.gv-hotels-head p{max-width:400px;font-size:15px;line-height:1.8;color:#637995}
+.gv-hotels-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.gv-hotel{overflow:hidden;border-radius:30px;border:1px solid #e6edf5;background:white;box-shadow:0 16px 38px rgba(25,72,127,.08);min-width:0}
+.gv-hotel-viewer{position:relative;aspect-ratio:16/10;background:#e4edf4;overflow:hidden}
+.gv-hotel-viewer img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .65s ease,opacity .2s ease}
+.gv-hotel:hover .gv-hotel-viewer img{transform:scale(1.03)}
+.gv-hotel-controls{position:absolute;bottom:13px;right:14px;display:flex;align-items:center;gap:8px;z-index:2}
+.gv-hotel-controls button{background:rgba(13,41,77,.77);color:#fff;width:40px;height:40px;border-radius:50%;font-size:22px;border:1px solid #ffffff55;cursor:pointer}
+.gv-hotel-count{color:white;background:rgba(13,41,77,.77);border-radius:20px;font-size:12px;font-weight:750;padding:9px 12px}
+.gv-hotel-info{padding:24px 26px 27px}
+.gv-hotel-info small{font-size:12px;color:#3273ab;font-weight:800;letter-spacing:.1em}
+.gv-hotel-info h3{font-size:25px;line-height:1.35;color:#173f75;letter-spacing:-.04em;margin:8px 0}
+.gv-hotel-info p{color:#667991;font-size:14px;line-height:1.8}
+.gv-hotels-note{font-size:12px;color:#71859b;line-height:1.8;margin-top:20px}
+@media(max-width:767px){.gv-hotels{padding:65px 16px 70px}.gv-hotels-head{display:block}.gv-hotels-head p{margin-top:12px;font-size:14px}.gv-hotels-grid{grid-template-columns:1fr;gap:16px}.gv-hotel{border-radius:22px}.gv-hotel-info{padding:19px 21px 23px}.gv-hotel-info h3{font-size:21px}.gv-hotel-controls button{width:44px;height:44px}}
+
+</style>
 <style>
     :root{
       --green:#0B3D2E;
@@ -2288,6 +2311,78 @@ html{scroll-behavior:smooth}body{font-family:'DM Sans','Noto Sans KR',sans-serif
 #joining-steps{scroll-margin-top:88px}
 @media(max-width:960px){.gv-trust-band{flex-wrap:wrap}.gv-trust-actions{width:100%;max-width:none;justify-content:flex-start;padding-left:64px}}
 @media(max-width:767px){.new-eyebrow{font-size:12px!important;padding:8px 11px}.gv-trust-band{padding:18px;gap:12px;border-radius:18px}.gv-trust-copy strong{font-size:16px}.gv-trust-copy p{font-size:12px}.gv-trust-actions{padding-left:0;gap:6px}.gv-trust-actions a{font-size:11px;flex:1;white-space:normal;text-align:center;padding:10px 5px}.gv-trust-icon{width:36px;height:36px;min-width:36px;font-size:19px}.new-benefit-banner small{font-size:10px!important}}
+
+/* Typography system V1 — accessible golf membership landing */
+:root{--gv-font:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--gv-type-ink:#173657;--gv-type-muted:#50647c}
+html{font-synthesis:none;-webkit-text-size-adjust:100%}
+body,button,input,select,textarea,summary,a{font-family:var(--gv-font)!important}
+body{font-size:16px;line-height:1.7;letter-spacing:-.025em}
+p,li,dd,dt{line-height:1.75}
+/* Consistent hierarchy: main / section / card / body / supporting */
+.title,.section .title{font-size:clamp(30px,3.1vw,42px)!important;line-height:1.31!important;font-weight:800!important;letter-spacing:-.055em!important}
+.subtitle{font-size:clamp(21px,2vw,27px)!important;line-height:1.4!important;font-weight:800!important;letter-spacing:-.04em!important}
+.desc{font-size:15.5px!important;line-height:1.85!important;font-weight:500!important;color:var(--gv-type-muted)}
+.eyebrow,.new-section-kicker,.new-gallery-copy small{font-size:12px!important;font-weight:800!important;letter-spacing:.095em!important;line-height:1.6!important}
+.new-logo{font-size:20px!important;font-weight:800!important;letter-spacing:-.035em!important}.new-logo small{font-size:10px!important}
+.new-nav-links a,.new-nav-call{font-size:14px!important;font-weight:700!important}
+.new-eyebrow{font-size:15px!important;line-height:1.55!important}
+.new-hero h1{font-size:clamp(58px,6.5vw,89px)!important;font-weight:900!important;line-height:1.16!important;letter-spacing:-.075em!important}
+.new-hero-sub{font-size:17px!important;line-height:1.75!important;font-weight:600!important}
+.new-benefit-banner small{font-size:13px!important;line-height:1.55!important}
+.new-benefit-banner strong{font-size:clamp(24px,2.4vw,30px)!important;line-height:1.45!important}
+.new-benefit-banner span{font-size:12px!important;line-height:1.6!important}
+.new-main-cta,.new-line-cta{font-size:15px!important;font-weight:800!important}
+.new-gallery-head h2{font-size:clamp(32px,3.4vw,46px)!important;line-height:1.34!important;letter-spacing:-.052em!important}
+.new-gallery-head p{font-size:16px!important;line-height:1.85!important}
+.new-gallery-copy h3{font-size:clamp(22px,2.2vw,27px)!important;line-height:1.4!important;font-weight:800!important}
+.new-gallery-copy p{font-size:15px!important;line-height:1.8!important}
+.bang5-feature-copy .copy-left h2{font-size:clamp(26px,3.4vw,42px)!important;line-height:1.28!important}
+.bang5-feature-copy .copy-left p{font-size:15px!important;line-height:1.7!important}
+.bang5-feature-copy .cta{font-size:14px!important}
+/* More legible info and pricing */
+.course-grid h3,.hotel-grid h3,.membership-grid h3{font-weight:800!important;letter-spacing:-.04em!important}
+.course-grid .desc,.hotel-grid .desc,.membership-grid .desc{font-size:15px!important;line-height:1.8!important}
+.course-spec span,.media-label,.pill{font-size:12px!important;line-height:1.45!important;font-weight:700!important}
+.rates-table .rate-name,.rates-table .rate-name{font-size:14px!important;line-height:1.65!important}
+.rates-table .text-xl{font-size:21px!important}
+.compare-table th,.compare-table td{font-size:14px!important;line-height:1.6!important}
+.guide-name{font-size:24px!important;font-weight:800!important}.guide-role{font-size:13px!important;line-height:1.7!important}
+.guide-copy{font-size:15px!important;line-height:1.85!important}.guide-point{font-size:12px!important}
+.guide-bottom{font-size:12px!important;line-height:1.7!important}.guide-actions a{font-size:14px!important}
+.gv-trust-copy strong{font-size:19px!important}.gv-trust-copy p{font-size:14.5px!important}.gv-trust-copy small{font-size:12px!important}
+.step-line .desc,.gv-join-row .desc{font-size:15px!important;line-height:1.75!important}
+.faq-group-title{font-size:15px!important;font-weight:800!important}
+#faq summary{font-size:16px!important;line-height:1.6!important;font-weight:750!important}
+#faq .desc{font-size:15px!important}
+/* Calculator controls: retain all IDs/data attributes/handlers */
+#calculator h3{font-size:20px!important;line-height:1.4!important}
+#calculator input,#calculator select,#inquiry input,#inquiry select,#inquiry textarea{font-size:16px!important;line-height:1.5!important}
+#calculator button,#inquiry button{font-weight:750!important}
+#calculator .text-\[11px\],#calculator .text-\[10px\],#inquiry .text-\[11px\]{font-size:12px!important;line-height:1.55!important}
+.footer-label{font-size:12px!important}.footer-value{font-size:13px!important}
+/* Breakpoints */
+@media(max-width:767px){
+ body{font-size:15px;line-height:1.7}
+ .section .title,.title{font-size:29px!important;line-height:1.37!important}
+ .subtitle{font-size:22px!important;line-height:1.4!important}
+ .desc{font-size:15px!important;line-height:1.78!important}
+ .new-logo{font-size:16px!important}.new-logo small{font-size:9px!important}
+ .new-hero h1{font-size:clamp(49px,12vw,64px)!important;line-height:1.12!important}
+ .new-hero-sub{font-size:15.5px!important}
+ .new-eyebrow{font-size:12px!important}
+ .new-gallery-head h2{font-size:30px!important;line-height:1.34!important}
+ .new-gallery-head p{font-size:15px!important}
+ .new-gallery-copy h3{font-size:22px!important}.new-gallery-copy p{font-size:15px!important}
+ .course-grid .desc,.hotel-grid .desc{font-size:15px!important}
+ .rates-table .rate-name{font-size:12.5px!important}
+ .rates-table .text-xl{font-size:16px!important}
+ .guide-name{font-size:20px!important}
+ .guide-copy{font-size:15px!important}
+ .gv-trust-copy strong{font-size:16px!important}.gv-trust-copy p{font-size:13.5px!important}
+ .bang5-feature-copy .copy-left h2{font-size:23px!important}.bang5-feature-copy .copy-left p{font-size:13px!important}
+ .mobile-sticky a{font-size:13px!important;font-weight:750!important}
+}
+
 </style></head>
 <body class="antialiased">
 <!-- NAV -->
@@ -2616,6 +2711,31 @@ html{scroll-behavior:smooth}body{font-family:'DM Sans','Noto Sans KR',sans-serif
 </div>
 </div>
 </section>
+
+<!-- HOTEL GUIDE — original photos restored, directly after 5 golf courses -->
+<section class="gv-hotels" id="hotels" aria-label="방콕 골프여행 호텔 안내">
+  <div class="gv-hotels-wrap">
+    <div class="gv-hotels-head reveal"><div><div class="kicker">STAY IN BANGKOK</div><h2>라운드 후의 휴식까지,<br>방콕 추천 숙소</h2></div><p>숙박도 골프여행의 중요한 부분입니다. 호텔 사진을 넘겨보며 숙소 분위기를 살펴보세요.</p></div>
+    <div class="gv-hotels-grid">
+      <article class="gv-hotel reveal">
+        <div class="gv-hotel-viewer" data-images="./images/hotel-tisha.jpg|./images/hotel-tisha1.jpg|./images/Tisha Hotel1.jpeg|./images/Tisha Hotel2.jpeg">
+          <img src="./images/hotel-tisha.jpg" loading="lazy" alt="티샤 호텔 사진"/>
+          <div class="gv-hotel-controls"><button type="button" data-dir="-1" aria-label="티샤 호텔 이전 사진">‹</button><span class="gv-hotel-count">1 / 4</span><button type="button" data-dir="1" aria-label="티샤 호텔 다음 사진">›</button></div>
+        </div>
+        <div class="gv-hotel-info"><small>HOTEL 01</small><h3>티샤 호텔</h3><p>골프 일정에 맞춰 검토할 수 있는 방콕 숙소입니다. 객실·숙박조건은 출발일에 따라 확인합니다.</p></div>
+      </article>
+      <article class="gv-hotel reveal">
+        <div class="gv-hotel-viewer" data-images="./images/hotel-amaranth.jpg">
+          <img src="./images/hotel-amaranth.jpg" loading="lazy" alt="아마란스 호텔 사진"/>
+          <div class="gv-hotel-controls"><span class="gv-hotel-count">1 / 1</span></div>
+        </div>
+        <div class="gv-hotel-info"><small>HOTEL 02</small><h3>아마란스 수완나품 호텔</h3><p>공항 이동 동선 등을 고려하여 살펴볼 수 있는 숙소입니다. 실제 배정과 제공조건은 예약 시 확정됩니다.</p></div>
+      </article>
+    </div>
+    <p class="gv-hotels-note">※ 호텔은 숙소 선택을 돕기 위한 사진 예시입니다. 회원 이용요금에 적용되는 숙박 시설과 실제 배정 여부는 구장·시즌·예약조건에 따라 달라질 수 있습니다.</p>
+  </div>
+</section>
+
 <section class="section bg-[#FBFAF5]" id="rates">
 <div class="container max-w-5xl">
 <div class="text-center reveal">
@@ -3397,5 +3517,21 @@ html{scroll-behavior:smooth}body{font-family:'DM Sans','Noto Sans KR',sans-serif
   syncDefaultTeamExtras();
   calculateMembership();
 </script>
+
+<script>
+/* Hotel photo slider; independent of membership calculator */
+document.querySelectorAll('.gv-hotel-viewer').forEach(viewer=>{
+  const images=(viewer.dataset.images||'').split('|').filter(Boolean);
+  const photo=viewer.querySelector('img');
+  const counter=viewer.querySelector('.gv-hotel-count');
+  let i=0;
+  viewer.querySelectorAll('button[data-dir]').forEach(btn=>btn.addEventListener('click',()=>{
+    i=(i+Number(btn.dataset.dir)+images.length)%images.length;
+    photo.src=images[i];
+    counter.textContent=`${i+1} / ${images.length}`;
+  }));
+});
+</script>
+
 </body>
 </html>
