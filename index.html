@@ -2174,7 +2174,7 @@ html{scroll-behavior:smooth}body{font-family:'DM Sans','Noto Sans KR',sans-serif
 <!-- ===== WINTER PREPARATION ===== -->
 <section class="new-story" id="winter-preparation"><div class="new-story-inner"><div class="new-story-decor">HELLO<br/>BANGKOK!</div><div class="new-story-content"><div class="new-section-kicker">THE WINTER ESCAPE <span>✳</span></div><h2>겨울이 기다려지는<br/><em>새로운 이유.</em></h2><p>한 번 떠나고 끝나는 여행이 아닙니다. 그린밸리 Five-Star 회원권으로 올겨울부터 매년 방콕의 다섯 골프장을 즐겨보세요.</p><div class="new-story-bottom"><span><b>20년</b><small>회원자격</small></span><span><b>5곳</b><small>제휴 골프장</small></span><span><b>99홀</b><small>라운드 선택</small></span></div></div></div></section>
 <!-- PROMOTION GALLERY -->
-<section class="new-gallery" id="bangkok-gallery"><div class="new-gallery-inner"><div class="new-gallery-head"><div><div class="new-section-kicker">BANGKOK TRAVEL VISUALS</div><h2>3D 캐릭터 이미지로<br/>여행 분위기를 더했습니다.</h2></div><p>bang1~bang4 이미지를 각 비율에 맞게 배치했습니다. 메인 비주얼, 설명용 카드, 정사각형 포인트 이미지, 파노라마 배너까지 각각 어울리는 자리에 들어가도록 정리했습니다.</p></div><div class="new-gallery-grid"><article class="new-gallery-card new-gallery-feature reveal"><img alt="방콕 골프 리조트 풍경과 시니어 여행객 이미지" loading="lazy" src="./images/bang2.png"/><div class="new-gallery-copy"><small>FEATURE VISUAL</small><h3>중간 섹션용 메인 비주얼</h3><p>설명 글 옆에 두기 좋은 4:3 이미지입니다. 리조트, 골프, 여행의 분위기를 동시에 보여줘서 소개 영역에 잘 어울립니다.</p></div></article><div class="new-gallery-side"><article class="new-gallery-card new-gallery-square reveal"><img alt="방콕 골프여행 시니어 여행객 셀카 이미지" loading="lazy" src="./images/bang3.png"/><div class="new-gallery-copy"><small>SQUARE SNAPSHOT</small><h3>정사각형 포인트 컷</h3><p>SNS 느낌의 즐거운 표정이 잘 살아 있어, 카드형 영역이나 후기 소개 섹션에 포인트로 쓰기 좋습니다.</p></div></article></div><article class="new-gallery-card new-gallery-wide reveal"><img alt="방콕 골프 리조트 파노라마 여행 이미지" loading="lazy" src="./images/bang4.png"/><div class="new-gallery-copy"><div><span class="new-gallery-badge">추천 활용 <em>CTA 배너</em></span><h3>넓은 배너 구간 전용 파노라마</h3></div><div><p>가로로 긴 3:1 이미지라서 섹션 사이 배너, 안내문 상단, 이벤트 띠배너처럼 쓰기 좋습니다. 텍스트 얹을 여백도 충분합니다.</p></div></div></article></div></div></section>
+<section class="new-gallery" id="bangkok-gallery"><div class="new-gallery-inner"><div class="new-gallery-head"><div><div class="new-section-kicker">BANGKOK TRAVEL VISUALS</div><h2>겨울엔 방콕에서,<br/>조금 더 특별한 골프여행</h2></div><p>푸른 하늘과 따뜻한 햇살, 그리고 좋은 사람들. 매년 겨울이 기다려지는 골프 여행을 만나보세요.</p></div><div class="new-gallery-grid"><article class="new-gallery-card new-gallery-feature reveal"><img alt="방콕 골프 리조트 풍경과 시니어 여행객 이미지" loading="lazy" src="./images/bang2.png"/><div class="new-gallery-copy"><small>FEATURE VISUAL</small><h3>필드 위에서 시작되는 즐거운 하루</h3><p>겨울을 잠시 잊고 따뜻한 방콕의 필드에서 라운드를 즐겨보세요.</p></div></article><div class="new-gallery-side"><article class="new-gallery-card new-gallery-square reveal"><img alt="방콕 골프여행 시니어 여행객 셀카 이미지" loading="lazy" src="./images/bang3.png"/><div class="new-gallery-copy"><small>SQUARE SNAPSHOT</small><h3>친구와 함께하는 방콕 골프</h3><p>라운드뿐 아니라 함께 웃고 쉬는 시간까지 여행의 즐거움입니다.</p></div></article></div><article class="new-gallery-card new-gallery-wide reveal"><img alt="방콕 골프 리조트 파노라마 여행 이미지" loading="lazy" src="./images/bang4.png"/><div class="new-gallery-copy"><div><span class="new-gallery-badge">WINTER GOLF <em>2026</em></span><h3>올겨울, 방콕에서 만나요</h3></div><div><p>5개 골프장 · 총 99홀. 내 일정에 맞는 골프 여행을 상담해보세요.</p></div></div></article></div></div></section>
 <!-- MEMBERSHIP OVERVIEW -->
 <section class="section bg-[#FBFAF5]" id="overview">
 <div class="container">
@@ -2873,6 +2873,15 @@ html{scroll-behavior:smooth}body{font-family:'DM Sans','Noto Sans KR',sans-serif
 <a class="bg-yellow-400 text-black p-3 rounded-xl text-center font-black text-xs" data-kakao-cta="" href="#">💬 카톡</a>
 </div>
 <script>
+  // 이미지 주소는 기존 골프장 사진과 동일하게 ./images/파일명 사용.
+  // 이미지를 index.html 옆에 업로드한 경우에만 루트 경로로 재시도합니다.
+  document.querySelectorAll('img[src^="./images/bang"]').forEach(function(img){
+    img.addEventListener('error', function(){
+      if (img.dataset.bangFallback) return;
+      img.dataset.bangFallback='1';
+      img.src='./'+img.getAttribute('src').split('/').pop();
+    });
+  });
   // ===== COST CALCULATOR =====
   const KRW = new Intl.NumberFormat("ko-KR");
   let calcState = { partySize:4, nights:4, days:6, rounds:4, membershipPlan:"GOLD", membershipPrice:19800000 };
